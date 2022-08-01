@@ -1,0 +1,2 @@
+peak_count	FRiP	peak_genome_coverage
+247247	0.221	0.0007

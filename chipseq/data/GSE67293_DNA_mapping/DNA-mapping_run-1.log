@@ -1,0 +1,936 @@
+/localdisk/home/kchhatba/mambaforge/envs/snakePipes/bin/DNA-mapping -i GSE67293 -o GSE67293_DNA_mapping -m mapping --local -j 126 --reads _1 _2 GRCm37_gencode_release1
+
+TMPDIR=/datastore/homes3/kchhatba/temp PYTHONNOUSERSITE=True /localdisk/home/kchhatba/mambaforge/envs/snakePipes/bin/snakemake --use-conda --conda-prefix /localdisk/home/kchhatba/mambaforge/envs --latency-wait 300 --snakefile /localdisk/home/kchhatba/mambaforge/envs/snakePipes/lib/python3.10/site-packages/snakePipes/workflows/DNA-mapping/Snakefile --jobs 126 --directory /datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE67293_DNA_mapping --configfile /datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE67293_DNA_mapping/DNA-mapping.config.yaml --keep-going
+
+
+---- This analysis has been done using snakePipes version 2.5.3 ----
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 126
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count    min threads    max threads
+------------------------  -------  -------------  -------------
+Bowtie2                         4             24             24
+FASTQ1                          4              1              1
+all                             1              1              1
+bamCoverage                     4             16             16
+bamCoverage_filtered            4             16             16
+bamPE_fragment_size             1             24             24
+estimate_read_filtering         4              1              1
+filter_reads                    4              1              1
+multiBamSummary                 1             24             24
+multiQC                         1              1              1
+origFASTQ1                      4              1              1
+plotCorrelation_pearson         1              1              1
+plotCorrelation_spearman        1              1              1
+plotCoverage                    1             24             24
+plotPCA                         1              1              1
+sambamba_flagstat               4              1              1
+sambamba_markdup                4             10             10
+samtools_filter                 4              8              8
+samtools_index                  4              1              1
+samtools_index_filtered         4              1              1
+total                          56              1             24
+
+Select jobs to execute...
+
+[Thu Jul 28 10:34:56 2022]
+rule origFASTQ1:
+    input: /datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE67293/SRR1930031_1.fastq.gz
+    output: originalFASTQ/SRR1930031_1.fastq.gz
+    jobid: 16
+    reason: Missing output files: originalFASTQ/SRR1930031_1.fastq.gz
+    wildcards: sample=SRR1930031
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 10:34:56 2022]
+rule origFASTQ1:
+    input: /datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE67293/SRR1930030_1.fastq.gz
+    output: originalFASTQ/SRR1930030_1.fastq.gz
+    jobid: 12
+    reason: Missing output files: originalFASTQ/SRR1930030_1.fastq.gz
+    wildcards: sample=SRR1930030
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 10:34:56 2022]
+rule origFASTQ1:
+    input: /datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE67293/SRR1930029_1.fastq.gz
+    output: originalFASTQ/SRR1930029_1.fastq.gz
+    jobid: 8
+    reason: Missing output files: originalFASTQ/SRR1930029_1.fastq.gz
+    wildcards: sample=SRR1930029
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 10:34:56 2022]
+rule origFASTQ1:
+    input: /datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE67293/SRR1930028_1.fastq.gz
+    output: originalFASTQ/SRR1930028_1.fastq.gz
+    jobid: 4
+    reason: Missing output files: originalFASTQ/SRR1930028_1.fastq.gz
+    wildcards: sample=SRR1930028
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+[Thu Jul 28 10:34:56 2022]
+Finished job 16.
+1 of 56 steps (2%) done
+[Thu Jul 28 10:34:56 2022]
+Finished job 12.
+2 of 56 steps (4%) done
+[Thu Jul 28 10:34:56 2022]
+Finished job 8.
+3 of 56 steps (5%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:34:56 2022]
+rule FASTQ1:
+    input: originalFASTQ/SRR1930030_1.fastq.gz
+    output: FASTQ/SRR1930030_1.fastq.gz
+    jobid: 11
+    reason: Missing output files: FASTQ/SRR1930030_1.fastq.gz; Input files updated by another job: originalFASTQ/SRR1930030_1.fastq.gz
+    wildcards: sample=SRR1930030
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 10:34:56 2022]
+rule FASTQ1:
+    input: originalFASTQ/SRR1930029_1.fastq.gz
+    output: FASTQ/SRR1930029_1.fastq.gz
+    jobid: 7
+    reason: Missing output files: FASTQ/SRR1930029_1.fastq.gz; Input files updated by another job: originalFASTQ/SRR1930029_1.fastq.gz
+    wildcards: sample=SRR1930029
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 10:34:56 2022]
+rule FASTQ1:
+    input: originalFASTQ/SRR1930031_1.fastq.gz
+    output: FASTQ/SRR1930031_1.fastq.gz
+    jobid: 15
+    reason: Missing output files: FASTQ/SRR1930031_1.fastq.gz; Input files updated by another job: originalFASTQ/SRR1930031_1.fastq.gz
+    wildcards: sample=SRR1930031
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+[Thu Jul 28 10:34:56 2022]
+Finished job 4.
+4 of 56 steps (7%) done
+[Thu Jul 28 10:34:56 2022]
+Finished job 11.
+5 of 56 steps (9%) done
+[Thu Jul 28 10:34:56 2022]
+Finished job 7.
+6 of 56 steps (11%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:34:56 2022]
+rule Bowtie2:
+    input: FASTQ/SRR1930029_1.fastq.gz
+    output: Bowtie2/SRR1930029.Bowtie2_summary.txt, Bowtie2/SRR1930029.sorted.bam
+    log: Bowtie2/logs/SRR1930029.sort.log
+    jobid: 6
+    benchmark: Bowtie2/.benchmark/Bowtie2.SRR1930029.benchmark
+    reason: Missing output files: Bowtie2/SRR1930029.sorted.bam, Bowtie2/SRR1930029.Bowtie2_summary.txt; Input files updated by another job: FASTQ/SRR1930029_1.fastq.gz
+    wildcards: sample=SRR1930029
+    threads: 24
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 10:34:56 2022]
+rule FASTQ1:
+    input: originalFASTQ/SRR1930028_1.fastq.gz
+    output: FASTQ/SRR1930028_1.fastq.gz
+    jobid: 3
+    reason: Missing output files: FASTQ/SRR1930028_1.fastq.gz; Input files updated by another job: originalFASTQ/SRR1930028_1.fastq.gz
+    wildcards: sample=SRR1930028
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/b6da7a6611541c84dd4e9d74877a7f8e
+
+[Thu Jul 28 10:34:56 2022]
+rule Bowtie2:
+    input: FASTQ/SRR1930030_1.fastq.gz
+    output: Bowtie2/SRR1930030.Bowtie2_summary.txt, Bowtie2/SRR1930030.sorted.bam
+    log: Bowtie2/logs/SRR1930030.sort.log
+    jobid: 10
+    benchmark: Bowtie2/.benchmark/Bowtie2.SRR1930030.benchmark
+    reason: Missing output files: Bowtie2/SRR1930030.Bowtie2_summary.txt, Bowtie2/SRR1930030.sorted.bam; Input files updated by another job: FASTQ/SRR1930030_1.fastq.gz
+    wildcards: sample=SRR1930030
+    threads: 24
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/b6da7a6611541c84dd4e9d74877a7f8e
+[Thu Jul 28 10:34:56 2022]
+Finished job 15.
+7 of 56 steps (12%) done
+[Thu Jul 28 10:34:56 2022]
+Finished job 3.
+8 of 56 steps (14%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:34:56 2022]
+rule Bowtie2:
+    input: FASTQ/SRR1930028_1.fastq.gz
+    output: Bowtie2/SRR1930028.Bowtie2_summary.txt, Bowtie2/SRR1930028.sorted.bam
+    log: Bowtie2/logs/SRR1930028.sort.log
+    jobid: 2
+    benchmark: Bowtie2/.benchmark/Bowtie2.SRR1930028.benchmark
+    reason: Missing output files: Bowtie2/SRR1930028.Bowtie2_summary.txt, Bowtie2/SRR1930028.sorted.bam; Input files updated by another job: FASTQ/SRR1930028_1.fastq.gz
+    wildcards: sample=SRR1930028
+    threads: 24
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/b6da7a6611541c84dd4e9d74877a7f8e
+
+[Thu Jul 28 10:34:56 2022]
+rule Bowtie2:
+    input: FASTQ/SRR1930031_1.fastq.gz
+    output: Bowtie2/SRR1930031.Bowtie2_summary.txt, Bowtie2/SRR1930031.sorted.bam
+    log: Bowtie2/logs/SRR1930031.sort.log
+    jobid: 14
+    benchmark: Bowtie2/.benchmark/Bowtie2.SRR1930031.benchmark
+    reason: Missing output files: Bowtie2/SRR1930031.sorted.bam, Bowtie2/SRR1930031.Bowtie2_summary.txt; Input files updated by another job: FASTQ/SRR1930031_1.fastq.gz
+    wildcards: sample=SRR1930031
+    threads: 24
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/b6da7a6611541c84dd4e9d74877a7f8e
+[Thu Jul 28 10:36:53 2022]
+Finished job 14.
+9 of 56 steps (16%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:36:53 2022]
+rule sambamba_markdup:
+    input: Bowtie2/SRR1930031.sorted.bam
+    output: Bowtie2/SRR1930031.bam
+    log: Bowtie2/logs/SRR1930031.sambamba_markdup.out, Bowtie2/logs/SRR1930031.sambamba_markdup.err
+    jobid: 13
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.SRR1930031.benchmark
+    reason: Missing output files: Bowtie2/SRR1930031.bam; Input files updated by another job: Bowtie2/SRR1930031.sorted.bam
+    wildcards: sample=SRR1930031
+    threads: 10
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/9cfb4fdc81feb9d3f404924481efa8cb
+[Thu Jul 28 10:37:18 2022]
+Finished job 6.
+10 of 56 steps (18%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:37:18 2022]
+rule sambamba_markdup:
+    input: Bowtie2/SRR1930029.sorted.bam
+    output: Bowtie2/SRR1930029.bam
+    log: Bowtie2/logs/SRR1930029.sambamba_markdup.out, Bowtie2/logs/SRR1930029.sambamba_markdup.err
+    jobid: 5
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.SRR1930029.benchmark
+    reason: Missing output files: Bowtie2/SRR1930029.bam; Input files updated by another job: Bowtie2/SRR1930029.sorted.bam
+    wildcards: sample=SRR1930029
+    threads: 10
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/9cfb4fdc81feb9d3f404924481efa8cb
+[Thu Jul 28 10:38:04 2022]
+Finished job 13.
+11 of 56 steps (20%) done
+Removing temporary output Bowtie2/SRR1930031.sorted.bam.
+Select jobs to execute...
+
+[Thu Jul 28 10:38:04 2022]
+rule samtools_index:
+    input: Bowtie2/SRR1930031.bam
+    output: Bowtie2/SRR1930031.bam.bai
+    log: Bowtie2/logs/SRR1930031.index.log
+    jobid: 36
+    reason: Missing output files: Bowtie2/SRR1930031.bam.bai; Input files updated by another job: Bowtie2/SRR1930031.bam
+    wildcards: sample=SRR1930031
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Warning: the following output files of rule samtools_index were not present when the DAG was created:
+{'Bowtie2/SRR1930031.bam.bai'}
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:38:04 2022]
+rule sambamba_flagstat:
+    input: Bowtie2/SRR1930031.bam
+    output: Sambamba/SRR1930031.markdup.txt
+    log: Sambamba/logs/SRR1930031.flagstat.log
+    jobid: 20
+    reason: Missing output files: Sambamba/SRR1930031.markdup.txt; Input files updated by another job: Bowtie2/SRR1930031.bam
+    wildcards: sample=SRR1930031
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/9cfb4fdc81feb9d3f404924481efa8cb
+[Thu Jul 28 10:38:04 2022]
+rule samtools_filter:
+    input: Bowtie2/SRR1930031.bam
+    output: filtered_bam/SRR1930031.filtered.tmp.bam
+    log: filtered_bam/logs/samtools_filter.SRR1930031.out, filtered_bam/logs/samtools_filter.SRR1930031.err
+    jobid: 28
+    benchmark: filtered_bam/.benchmark/samtools_filter.SRR1930031.benchmark
+    reason: Missing output files: filtered_bam/SRR1930031.filtered.tmp.bam; Input files updated by another job: Bowtie2/SRR1930031.bam
+    wildcards: sample=SRR1930031
+    threads: 8
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:38:04 2022]
+Finished job 28.
+12 of 56 steps (21%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:38:04 2022]
+rule filter_reads:
+    input: filtered_bam/SRR1930031.filtered.tmp.bam
+    output: filtered_bam/SRR1930031.filtered.bam
+    jobid: 27
+    reason: Missing output files: filtered_bam/SRR1930031.filtered.bam; Input files updated by another job: filtered_bam/SRR1930031.filtered.tmp.bam
+    wildcards: sample=SRR1930031
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+[Thu Jul 28 10:38:04 2022]
+Finished job 27.
+13 of 56 steps (23%) done
+Removing temporary output filtered_bam/SRR1930031.filtered.tmp.bam.
+Select jobs to execute...
+
+[Thu Jul 28 10:38:04 2022]
+rule samtools_index_filtered:
+    input: filtered_bam/SRR1930031.filtered.bam
+    output: filtered_bam/SRR1930031.filtered.bam.bai
+    log: filtered_bam/logs/SRR1930031.index.log
+    jobid: 44
+    reason: Missing output files: filtered_bam/SRR1930031.filtered.bam.bai; Input files updated by another job: filtered_bam/SRR1930031.filtered.bam
+    wildcards: sample=SRR1930031
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:38:07 2022]
+Finished job 20.
+14 of 56 steps (25%) done
+[Thu Jul 28 10:38:09 2022]
+Finished job 36.
+15 of 56 steps (27%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:38:09 2022]
+rule bamCoverage:
+    input: Bowtie2/SRR1930031.bam, Bowtie2/SRR1930031.bam.bai
+    output: bamCoverage/SRR1930031.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.SRR1930031.out, bamCoverage/logs/bamCoverage.SRR1930031.err
+    jobid: 35
+    benchmark: bamCoverage/.benchmark/bamCoverage.SRR1930031.benchmark
+    reason: Missing output files: bamCoverage/SRR1930031.seq_depth_norm.bw; Input files updated by another job: Bowtie2/SRR1930031.bam, Bowtie2/SRR1930031.bam.bai
+    wildcards: sample=SRR1930031
+    threads: 16
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 10:38:09 2022]
+rule estimate_read_filtering:
+    input: Bowtie2/SRR1930031.bam, Bowtie2/SRR1930031.bam.bai
+    output: deepTools_qc/estimateReadFiltering/SRR1930031_filtering_estimation.txt
+    log: deepTools_qc/logs/SRR1930031.estimateReadFiltering.out, deepTools_qc/logs/SRR1930031.estimateReadFiltering.err
+    jobid: 54
+    reason: Missing output files: deepTools_qc/estimateReadFiltering/SRR1930031_filtering_estimation.txt; Input files updated by another job: Bowtie2/SRR1930031.bam, Bowtie2/SRR1930031.bam.bai
+    wildcards: sample=SRR1930031
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:38:09 2022]
+Finished job 44.
+16 of 56 steps (29%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:38:09 2022]
+rule bamCoverage_filtered:
+    input: filtered_bam/SRR1930031.filtered.bam, filtered_bam/SRR1930031.filtered.bam.bai
+    output: bamCoverage/SRR1930031.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.SRR1930031.filtered.out, bamCoverage/logs/bamCoverage.SRR1930031.filtered.err
+    jobid: 43
+    benchmark: bamCoverage/.benchmark/bamCoverage.SRR1930031.filtered.benchmark
+    reason: Missing output files: bamCoverage/SRR1930031.filtered.seq_depth_norm.bw; Input files updated by another job: filtered_bam/SRR1930031.filtered.bam.bai, filtered_bam/SRR1930031.filtered.bam
+    wildcards: sample=SRR1930031
+    threads: 16
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:38:42 2022]
+Finished job 2.
+17 of 56 steps (30%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:38:42 2022]
+rule sambamba_markdup:
+    input: Bowtie2/SRR1930028.sorted.bam
+    output: Bowtie2/SRR1930028.bam
+    log: Bowtie2/logs/SRR1930028.sambamba_markdup.out, Bowtie2/logs/SRR1930028.sambamba_markdup.err
+    jobid: 1
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.SRR1930028.benchmark
+    reason: Missing output files: Bowtie2/SRR1930028.bam; Input files updated by another job: Bowtie2/SRR1930028.sorted.bam
+    wildcards: sample=SRR1930028
+    threads: 10
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/9cfb4fdc81feb9d3f404924481efa8cb
+[Thu Jul 28 10:38:43 2022]
+Finished job 5.
+18 of 56 steps (32%) done
+Removing temporary output Bowtie2/SRR1930029.sorted.bam.
+Select jobs to execute...
+
+[Thu Jul 28 10:38:44 2022]
+rule sambamba_flagstat:
+    input: Bowtie2/SRR1930029.bam
+    output: Sambamba/SRR1930029.markdup.txt
+    log: Sambamba/logs/SRR1930029.flagstat.log
+    jobid: 18
+    reason: Missing output files: Sambamba/SRR1930029.markdup.txt; Input files updated by another job: Bowtie2/SRR1930029.bam
+    wildcards: sample=SRR1930029
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 10:38:44 2022]
+rule samtools_index:
+    input: Bowtie2/SRR1930029.bam
+    output: Bowtie2/SRR1930029.bam.bai
+    log: Bowtie2/logs/SRR1930029.index.log
+    jobid: 32
+    reason: Missing output files: Bowtie2/SRR1930029.bam.bai; Input files updated by another job: Bowtie2/SRR1930029.bam
+    wildcards: sample=SRR1930029
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/9cfb4fdc81feb9d3f404924481efa8cb
+
+Warning: the following output files of rule samtools_index were not present when the DAG was created:
+{'Bowtie2/SRR1930029.bam.bai'}
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:38:44 2022]
+rule samtools_filter:
+    input: Bowtie2/SRR1930029.bam
+    output: filtered_bam/SRR1930029.filtered.tmp.bam
+    log: filtered_bam/logs/samtools_filter.SRR1930029.out, filtered_bam/logs/samtools_filter.SRR1930029.err
+    jobid: 24
+    benchmark: filtered_bam/.benchmark/samtools_filter.SRR1930029.benchmark
+    reason: Missing output files: filtered_bam/SRR1930029.filtered.tmp.bam; Input files updated by another job: Bowtie2/SRR1930029.bam
+    wildcards: sample=SRR1930029
+    threads: 8
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:38:44 2022]
+Finished job 24.
+19 of 56 steps (34%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:38:44 2022]
+rule filter_reads:
+    input: filtered_bam/SRR1930029.filtered.tmp.bam
+    output: filtered_bam/SRR1930029.filtered.bam
+    jobid: 23
+    reason: Missing output files: filtered_bam/SRR1930029.filtered.bam; Input files updated by another job: filtered_bam/SRR1930029.filtered.tmp.bam
+    wildcards: sample=SRR1930029
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+[Thu Jul 28 10:38:44 2022]
+Finished job 23.
+20 of 56 steps (36%) done
+Removing temporary output filtered_bam/SRR1930029.filtered.tmp.bam.
+Select jobs to execute...
+
+[Thu Jul 28 10:38:44 2022]
+rule samtools_index_filtered:
+    input: filtered_bam/SRR1930029.filtered.bam
+    output: filtered_bam/SRR1930029.filtered.bam.bai
+    log: filtered_bam/logs/SRR1930029.index.log
+    jobid: 40
+    reason: Missing output files: filtered_bam/SRR1930029.filtered.bam.bai; Input files updated by another job: filtered_bam/SRR1930029.filtered.bam
+    wildcards: sample=SRR1930029
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:38:48 2022]
+Finished job 18.
+21 of 56 steps (38%) done
+[Thu Jul 28 10:38:48 2022]
+Finished job 54.
+22 of 56 steps (39%) done
+[Thu Jul 28 10:38:50 2022]
+Finished job 32.
+23 of 56 steps (41%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:38:50 2022]
+rule estimate_read_filtering:
+    input: Bowtie2/SRR1930029.bam, Bowtie2/SRR1930029.bam.bai
+    output: deepTools_qc/estimateReadFiltering/SRR1930029_filtering_estimation.txt
+    log: deepTools_qc/logs/SRR1930029.estimateReadFiltering.out, deepTools_qc/logs/SRR1930029.estimateReadFiltering.err
+    jobid: 52
+    reason: Missing output files: deepTools_qc/estimateReadFiltering/SRR1930029_filtering_estimation.txt; Input files updated by another job: Bowtie2/SRR1930029.bam.bai, Bowtie2/SRR1930029.bam
+    wildcards: sample=SRR1930029
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:38:50 2022]
+rule bamCoverage:
+    input: Bowtie2/SRR1930029.bam, Bowtie2/SRR1930029.bam.bai
+    output: bamCoverage/SRR1930029.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.SRR1930029.out, bamCoverage/logs/bamCoverage.SRR1930029.err
+    jobid: 31
+    benchmark: bamCoverage/.benchmark/bamCoverage.SRR1930029.benchmark
+    reason: Missing output files: bamCoverage/SRR1930029.seq_depth_norm.bw; Input files updated by another job: Bowtie2/SRR1930029.bam.bai, Bowtie2/SRR1930029.bam
+    wildcards: sample=SRR1930029
+    threads: 16
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:38:50 2022]
+Finished job 40.
+24 of 56 steps (43%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:38:50 2022]
+rule bamCoverage_filtered:
+    input: filtered_bam/SRR1930029.filtered.bam, filtered_bam/SRR1930029.filtered.bam.bai
+    output: bamCoverage/SRR1930029.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.SRR1930029.filtered.out, bamCoverage/logs/bamCoverage.SRR1930029.filtered.err
+    jobid: 39
+    benchmark: bamCoverage/.benchmark/bamCoverage.SRR1930029.filtered.benchmark
+    reason: Missing output files: bamCoverage/SRR1930029.filtered.seq_depth_norm.bw; Input files updated by another job: filtered_bam/SRR1930029.filtered.bam, filtered_bam/SRR1930029.filtered.bam.bai
+    wildcards: sample=SRR1930029
+    threads: 16
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:39:29 2022]
+Finished job 52.
+25 of 56 steps (45%) done
+[Thu Jul 28 10:40:42 2022]
+Finished job 1.
+26 of 56 steps (46%) done
+Removing temporary output Bowtie2/SRR1930028.sorted.bam.
+Select jobs to execute...
+
+[Thu Jul 28 10:40:43 2022]
+rule samtools_filter:
+    input: Bowtie2/SRR1930028.bam
+    output: filtered_bam/SRR1930028.filtered.tmp.bam
+    log: filtered_bam/logs/samtools_filter.SRR1930028.out, filtered_bam/logs/samtools_filter.SRR1930028.err
+    jobid: 22
+    benchmark: filtered_bam/.benchmark/samtools_filter.SRR1930028.benchmark
+    reason: Missing output files: filtered_bam/SRR1930028.filtered.tmp.bam; Input files updated by another job: Bowtie2/SRR1930028.bam
+    wildcards: sample=SRR1930028
+    threads: 8
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:40:43 2022]
+rule samtools_index:
+    input: Bowtie2/SRR1930028.bam
+    output: Bowtie2/SRR1930028.bam.bai
+    log: Bowtie2/logs/SRR1930028.index.log
+    jobid: 30
+    reason: Missing output files: Bowtie2/SRR1930028.bam.bai; Input files updated by another job: Bowtie2/SRR1930028.bam
+    wildcards: sample=SRR1930028
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Warning: the following output files of rule samtools_index were not present when the DAG was created:
+{'Bowtie2/SRR1930028.bam.bai'}
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:40:43 2022]
+rule sambamba_flagstat:
+    input: Bowtie2/SRR1930028.bam
+    output: Sambamba/SRR1930028.markdup.txt
+    log: Sambamba/logs/SRR1930028.flagstat.log
+    jobid: 17
+    reason: Missing output files: Sambamba/SRR1930028.markdup.txt; Input files updated by another job: Bowtie2/SRR1930028.bam
+    wildcards: sample=SRR1930028
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/9cfb4fdc81feb9d3f404924481efa8cb
+[Thu Jul 28 10:40:43 2022]
+Finished job 22.
+27 of 56 steps (48%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:40:43 2022]
+rule filter_reads:
+    input: filtered_bam/SRR1930028.filtered.tmp.bam
+    output: filtered_bam/SRR1930028.filtered.bam
+    jobid: 21
+    reason: Missing output files: filtered_bam/SRR1930028.filtered.bam; Input files updated by another job: filtered_bam/SRR1930028.filtered.tmp.bam
+    wildcards: sample=SRR1930028
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+[Thu Jul 28 10:40:43 2022]
+Finished job 21.
+28 of 56 steps (50%) done
+Removing temporary output filtered_bam/SRR1930028.filtered.tmp.bam.
+Select jobs to execute...
+
+[Thu Jul 28 10:40:43 2022]
+rule samtools_index_filtered:
+    input: filtered_bam/SRR1930028.filtered.bam
+    output: filtered_bam/SRR1930028.filtered.bam.bai
+    log: filtered_bam/logs/SRR1930028.index.log
+    jobid: 38
+    reason: Missing output files: filtered_bam/SRR1930028.filtered.bam.bai; Input files updated by another job: filtered_bam/SRR1930028.filtered.bam
+    wildcards: sample=SRR1930028
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:40:49 2022]
+Finished job 17.
+29 of 56 steps (52%) done
+[Thu Jul 28 10:40:51 2022]
+Finished job 30.
+30 of 56 steps (54%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:40:51 2022]
+rule estimate_read_filtering:
+    input: Bowtie2/SRR1930028.bam, Bowtie2/SRR1930028.bam.bai
+    output: deepTools_qc/estimateReadFiltering/SRR1930028_filtering_estimation.txt
+    log: deepTools_qc/logs/SRR1930028.estimateReadFiltering.out, deepTools_qc/logs/SRR1930028.estimateReadFiltering.err
+    jobid: 51
+    reason: Missing output files: deepTools_qc/estimateReadFiltering/SRR1930028_filtering_estimation.txt; Input files updated by another job: Bowtie2/SRR1930028.bam.bai, Bowtie2/SRR1930028.bam
+    wildcards: sample=SRR1930028
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:40:51 2022]
+rule bamCoverage:
+    input: Bowtie2/SRR1930028.bam, Bowtie2/SRR1930028.bam.bai
+    output: bamCoverage/SRR1930028.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.SRR1930028.out, bamCoverage/logs/bamCoverage.SRR1930028.err
+    jobid: 29
+    benchmark: bamCoverage/.benchmark/bamCoverage.SRR1930028.benchmark
+    reason: Missing output files: bamCoverage/SRR1930028.seq_depth_norm.bw; Input files updated by another job: Bowtie2/SRR1930028.bam.bai, Bowtie2/SRR1930028.bam
+    wildcards: sample=SRR1930028
+    threads: 16
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:40:52 2022]
+Finished job 38.
+31 of 56 steps (55%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:40:52 2022]
+rule bamCoverage_filtered:
+    input: filtered_bam/SRR1930028.filtered.bam, filtered_bam/SRR1930028.filtered.bam.bai
+    output: bamCoverage/SRR1930028.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.SRR1930028.filtered.out, bamCoverage/logs/bamCoverage.SRR1930028.filtered.err
+    jobid: 37
+    benchmark: bamCoverage/.benchmark/bamCoverage.SRR1930028.filtered.benchmark
+    reason: Missing output files: bamCoverage/SRR1930028.filtered.seq_depth_norm.bw; Input files updated by another job: filtered_bam/SRR1930028.filtered.bam.bai, filtered_bam/SRR1930028.filtered.bam
+    wildcards: sample=SRR1930028
+    threads: 16
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:41:34 2022]
+Finished job 51.
+32 of 56 steps (57%) done
+[Thu Jul 28 10:42:29 2022]
+Finished job 43.
+33 of 56 steps (59%) done
+[Thu Jul 28 10:42:29 2022]
+Finished job 35.
+34 of 56 steps (61%) done
+[Thu Jul 28 10:42:43 2022]
+Finished job 39.
+35 of 56 steps (62%) done
+[Thu Jul 28 10:42:46 2022]
+Finished job 31.
+36 of 56 steps (64%) done
+[Thu Jul 28 10:42:53 2022]
+Finished job 10.
+37 of 56 steps (66%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:42:53 2022]
+rule sambamba_markdup:
+    input: Bowtie2/SRR1930030.sorted.bam
+    output: Bowtie2/SRR1930030.bam
+    log: Bowtie2/logs/SRR1930030.sambamba_markdup.out, Bowtie2/logs/SRR1930030.sambamba_markdup.err
+    jobid: 9
+    benchmark: Bowtie2/.benchmark/sambamba_markdup.SRR1930030.benchmark
+    reason: Missing output files: Bowtie2/SRR1930030.bam; Input files updated by another job: Bowtie2/SRR1930030.sorted.bam
+    wildcards: sample=SRR1930030
+    threads: 10
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/9cfb4fdc81feb9d3f404924481efa8cb
+[Thu Jul 28 10:43:50 2022]
+Finished job 37.
+38 of 56 steps (68%) done
+[Thu Jul 28 10:43:51 2022]
+Finished job 29.
+39 of 56 steps (70%) done
+[Thu Jul 28 10:47:15 2022]
+Finished job 9.
+40 of 56 steps (71%) done
+Removing temporary output Bowtie2/SRR1930030.sorted.bam.
+Select jobs to execute...
+
+[Thu Jul 28 10:47:15 2022]
+rule samtools_filter:
+    input: Bowtie2/SRR1930030.bam
+    output: filtered_bam/SRR1930030.filtered.tmp.bam
+    log: filtered_bam/logs/samtools_filter.SRR1930030.out, filtered_bam/logs/samtools_filter.SRR1930030.err
+    jobid: 26
+    benchmark: filtered_bam/.benchmark/samtools_filter.SRR1930030.benchmark
+    reason: Missing output files: filtered_bam/SRR1930030.filtered.tmp.bam; Input files updated by another job: Bowtie2/SRR1930030.bam
+    wildcards: sample=SRR1930030
+    threads: 8
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:47:15 2022]
+rule sambamba_flagstat:
+    input: Bowtie2/SRR1930030.bam
+    output: Sambamba/SRR1930030.markdup.txt
+    log: Sambamba/logs/SRR1930030.flagstat.log
+    jobid: 19
+    reason: Missing output files: Sambamba/SRR1930030.markdup.txt; Input files updated by another job: Bowtie2/SRR1930030.bam
+    wildcards: sample=SRR1930030
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/9cfb4fdc81feb9d3f404924481efa8cb
+
+[Thu Jul 28 10:47:15 2022]
+rule samtools_index:
+    input: Bowtie2/SRR1930030.bam
+    output: Bowtie2/SRR1930030.bam.bai
+    log: Bowtie2/logs/SRR1930030.index.log
+    jobid: 34
+    reason: Missing output files: Bowtie2/SRR1930030.bam.bai; Input files updated by another job: Bowtie2/SRR1930030.bam
+    wildcards: sample=SRR1930030
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Warning: the following output files of rule samtools_index were not present when the DAG was created:
+{'Bowtie2/SRR1930030.bam.bai'}
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:47:15 2022]
+Finished job 26.
+41 of 56 steps (73%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:47:15 2022]
+rule filter_reads:
+    input: filtered_bam/SRR1930030.filtered.tmp.bam
+    output: filtered_bam/SRR1930030.filtered.bam
+    jobid: 25
+    reason: Missing output files: filtered_bam/SRR1930030.filtered.bam; Input files updated by another job: filtered_bam/SRR1930030.filtered.tmp.bam
+    wildcards: sample=SRR1930030
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+[Thu Jul 28 10:47:15 2022]
+Finished job 25.
+42 of 56 steps (75%) done
+Removing temporary output filtered_bam/SRR1930030.filtered.tmp.bam.
+Select jobs to execute...
+
+[Thu Jul 28 10:47:15 2022]
+rule samtools_index_filtered:
+    input: filtered_bam/SRR1930030.filtered.bam
+    output: filtered_bam/SRR1930030.filtered.bam.bai
+    log: filtered_bam/logs/SRR1930030.index.log
+    jobid: 42
+    reason: Missing output files: filtered_bam/SRR1930030.filtered.bam.bai; Input files updated by another job: filtered_bam/SRR1930030.filtered.bam
+    wildcards: sample=SRR1930030
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:47:29 2022]
+Finished job 19.
+43 of 56 steps (77%) done
+[Thu Jul 28 10:47:35 2022]
+Finished job 34.
+44 of 56 steps (79%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:47:35 2022]
+rule estimate_read_filtering:
+    input: Bowtie2/SRR1930030.bam, Bowtie2/SRR1930030.bam.bai
+    output: deepTools_qc/estimateReadFiltering/SRR1930030_filtering_estimation.txt
+    log: deepTools_qc/logs/SRR1930030.estimateReadFiltering.out, deepTools_qc/logs/SRR1930030.estimateReadFiltering.err
+    jobid: 53
+    reason: Missing output files: deepTools_qc/estimateReadFiltering/SRR1930030_filtering_estimation.txt; Input files updated by another job: Bowtie2/SRR1930030.bam.bai, Bowtie2/SRR1930030.bam
+    wildcards: sample=SRR1930030
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:47:35 2022]
+rule bamCoverage:
+    input: Bowtie2/SRR1930030.bam, Bowtie2/SRR1930030.bam.bai
+    output: bamCoverage/SRR1930030.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.SRR1930030.out, bamCoverage/logs/bamCoverage.SRR1930030.err
+    jobid: 33
+    benchmark: bamCoverage/.benchmark/bamCoverage.SRR1930030.benchmark
+    reason: Missing output files: bamCoverage/SRR1930030.seq_depth_norm.bw; Input files updated by another job: Bowtie2/SRR1930030.bam.bai, Bowtie2/SRR1930030.bam
+    wildcards: sample=SRR1930030
+    threads: 16
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:47:35 2022]
+Finished job 42.
+45 of 56 steps (80%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:47:35 2022]
+rule bamPE_fragment_size:
+    input: filtered_bam/SRR1930028.filtered.bam, filtered_bam/SRR1930029.filtered.bam, filtered_bam/SRR1930030.filtered.bam, filtered_bam/SRR1930031.filtered.bam, filtered_bam/SRR1930028.filtered.bam.bai, filtered_bam/SRR1930029.filtered.bam.bai, filtered_bam/SRR1930030.filtered.bam.bai, filtered_bam/SRR1930031.filtered.bam.bai
+    output: deepTools_qc/bamPEFragmentSize/fragmentSize.metric.tsv
+    log: deepTools_qc/logs/bamPEFragmentSize.out, deepTools_qc/logs/bamPEFragmentSize.err
+    jobid: 45
+    reason: Missing output files: deepTools_qc/bamPEFragmentSize/fragmentSize.metric.tsv; Input files updated by another job: filtered_bam/SRR1930031.filtered.bam.bai, filtered_bam/SRR1930028.filtered.bam.bai, filtered_bam/SRR1930029.filtered.bam.bai, filtered_bam/SRR1930030.filtered.bam, filtered_bam/SRR1930030.filtered.bam.bai, filtered_bam/SRR1930028.filtered.bam, filtered_bam/SRR1930029.filtered.bam, filtered_bam/SRR1930031.filtered.bam
+    threads: 24
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:47:35 2022]
+rule multiBamSummary:
+    input: filtered_bam/SRR1930028.filtered.bam, filtered_bam/SRR1930029.filtered.bam, filtered_bam/SRR1930030.filtered.bam, filtered_bam/SRR1930031.filtered.bam, filtered_bam/SRR1930028.filtered.bam.bai, filtered_bam/SRR1930029.filtered.bam.bai, filtered_bam/SRR1930030.filtered.bam.bai, filtered_bam/SRR1930031.filtered.bam.bai
+    output: deepTools_qc/multiBamSummary/read_coverage.bins.npz
+    log: deepTools_qc/logs/multiBamSummary.out, deepTools_qc/logs/multiBamSummary.err
+    jobid: 48
+    benchmark: deepTools_qc/.benchmark/multiBamSummary.benchmark
+    reason: Missing output files: deepTools_qc/multiBamSummary/read_coverage.bins.npz; Input files updated by another job: filtered_bam/SRR1930031.filtered.bam.bai, filtered_bam/SRR1930028.filtered.bam.bai, filtered_bam/SRR1930029.filtered.bam.bai, filtered_bam/SRR1930030.filtered.bam, filtered_bam/SRR1930030.filtered.bam.bai, filtered_bam/SRR1930028.filtered.bam, filtered_bam/SRR1930029.filtered.bam, filtered_bam/SRR1930031.filtered.bam
+    threads: 24
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:47:35 2022]
+rule plotCoverage:
+    input: filtered_bam/SRR1930028.filtered.bam, filtered_bam/SRR1930029.filtered.bam, filtered_bam/SRR1930030.filtered.bam, filtered_bam/SRR1930031.filtered.bam, filtered_bam/SRR1930028.filtered.bam.bai, filtered_bam/SRR1930029.filtered.bam.bai, filtered_bam/SRR1930030.filtered.bam.bai, filtered_bam/SRR1930031.filtered.bam.bai
+    output: deepTools_qc/plotCoverage/read_coverage.tsv
+    log: deepTools_qc/logs/plotCoverage.out, deepTools_qc/logs/plotCoverage.err
+    jobid: 46
+    benchmark: deepTools_qc/.benchmark/plotCoverage.benchmark
+    reason: Missing output files: deepTools_qc/plotCoverage/read_coverage.tsv; Input files updated by another job: filtered_bam/SRR1930031.filtered.bam.bai, filtered_bam/SRR1930028.filtered.bam.bai, filtered_bam/SRR1930029.filtered.bam.bai, filtered_bam/SRR1930030.filtered.bam, filtered_bam/SRR1930030.filtered.bam.bai, filtered_bam/SRR1930028.filtered.bam, filtered_bam/SRR1930029.filtered.bam, filtered_bam/SRR1930031.filtered.bam
+    threads: 24
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:47:35 2022]
+rule bamCoverage_filtered:
+    input: filtered_bam/SRR1930030.filtered.bam, filtered_bam/SRR1930030.filtered.bam.bai
+    output: bamCoverage/SRR1930030.filtered.seq_depth_norm.bw
+    log: bamCoverage/logs/bamCoverage.SRR1930030.filtered.out, bamCoverage/logs/bamCoverage.SRR1930030.filtered.err
+    jobid: 41
+    benchmark: bamCoverage/.benchmark/bamCoverage.SRR1930030.filtered.benchmark
+    reason: Missing output files: bamCoverage/SRR1930030.filtered.seq_depth_norm.bw; Input files updated by another job: filtered_bam/SRR1930030.filtered.bam, filtered_bam/SRR1930030.filtered.bam.bai
+    wildcards: sample=SRR1930030
+    threads: 16
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:48:05 2022]
+Finished job 45.
+46 of 56 steps (82%) done
+[Thu Jul 28 10:48:38 2022]
+Finished job 48.
+47 of 56 steps (84%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:48:38 2022]
+rule plotCorrelation_pearson:
+    input: deepTools_qc/multiBamSummary/read_coverage.bins.npz
+    output: deepTools_qc/plotCorrelation/correlation.pearson.read_coverage.tsv
+    log: deepTools_qc/logs/plotCorrelation_pearson.out, deepTools_qc/logs/plotCorrelation_pearson.err
+    jobid: 47
+    benchmark: deepTools_qc/.benchmark/plotCorrelation_pearson.benchmark
+    reason: Missing output files: deepTools_qc/plotCorrelation/correlation.pearson.read_coverage.tsv; Input files updated by another job: deepTools_qc/multiBamSummary/read_coverage.bins.npz
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:48:38 2022]
+rule plotPCA:
+    input: deepTools_qc/multiBamSummary/read_coverage.bins.npz
+    output: deepTools_qc/plotPCA/PCA.read_coverage.tsv
+    log: deepTools_qc/logs/plotPCA.out, deepTools_qc/logs/plotPCA.err
+    jobid: 50
+    benchmark: deepTools_qc/.benchmark/plotPCA.benchmark
+    reason: Missing output files: deepTools_qc/plotPCA/PCA.read_coverage.tsv; Input files updated by another job: deepTools_qc/multiBamSummary/read_coverage.bins.npz
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 10:48:38 2022]
+rule plotCorrelation_spearman:
+    input: deepTools_qc/multiBamSummary/read_coverage.bins.npz
+    output: deepTools_qc/plotCorrelation/correlation.spearman.read_coverage.tsv
+    log: deepTools_qc/logs/plotCorrelation_spearman.out, deepTools_qc/logs/plotCorrelation_spearman.err
+    jobid: 49
+    benchmark: deepTools_qc/.benchmark/plotCorrelation_spearman.benchmark
+    reason: Missing output files: deepTools_qc/plotCorrelation/correlation.spearman.read_coverage.tsv; Input files updated by another job: deepTools_qc/multiBamSummary/read_coverage.bins.npz
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:48:41 2022]
+Finished job 47.
+48 of 56 steps (86%) done
+[Thu Jul 28 10:48:41 2022]
+Finished job 50.
+49 of 56 steps (88%) done
+[Thu Jul 28 10:48:41 2022]
+Finished job 49.
+50 of 56 steps (89%) done
+[Thu Jul 28 10:48:57 2022]
+Finished job 53.
+51 of 56 steps (91%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:48:57 2022]
+rule multiQC:
+    input: deepTools_qc/bamPEFragmentSize/fragmentSize.metric.tsv, Bowtie2/SRR1930028.Bowtie2_summary.txt, Bowtie2/SRR1930029.Bowtie2_summary.txt, Bowtie2/SRR1930030.Bowtie2_summary.txt, Bowtie2/SRR1930031.Bowtie2_summary.txt, Sambamba/SRR1930028.markdup.txt, Sambamba/SRR1930029.markdup.txt, Sambamba/SRR1930030.markdup.txt, Sambamba/SRR1930031.markdup.txt, deepTools_qc/estimateReadFiltering/SRR1930028_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/SRR1930029_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/SRR1930030_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/SRR1930031_filtering_estimation.txt
+    output: multiQC/multiqc_report.html
+    log: multiQC/multiQC.out, multiQC/multiQC.err
+    jobid: 55
+    reason: Missing output files: multiQC/multiqc_report.html; Input files updated by another job: Sambamba/SRR1930028.markdup.txt, deepTools_qc/estimateReadFiltering/SRR1930031_filtering_estimation.txt, deepTools_qc/bamPEFragmentSize/fragmentSize.metric.tsv, deepTools_qc/estimateReadFiltering/SRR1930030_filtering_estimation.txt, Bowtie2/SRR1930029.Bowtie2_summary.txt, Bowtie2/SRR1930028.Bowtie2_summary.txt, Bowtie2/SRR1930030.Bowtie2_summary.txt, deepTools_qc/estimateReadFiltering/SRR1930028_filtering_estimation.txt, Sambamba/SRR1930031.markdup.txt, Sambamba/SRR1930030.markdup.txt, deepTools_qc/estimateReadFiltering/SRR1930029_filtering_estimation.txt, Sambamba/SRR1930029.markdup.txt, Bowtie2/SRR1930031.Bowtie2_summary.txt
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 10:49:08 2022]
+Finished job 55.
+52 of 56 steps (93%) done
+[Thu Jul 28 10:50:39 2022]
+Finished job 46.
+53 of 56 steps (95%) done
+[Thu Jul 28 10:51:58 2022]
+Finished job 33.
+54 of 56 steps (96%) done
+[Thu Jul 28 10:51:59 2022]
+Finished job 41.
+55 of 56 steps (98%) done
+Select jobs to execute...
+
+[Thu Jul 28 10:51:59 2022]
+localrule all:
+    input: Bowtie2/SRR1930028.bam, Bowtie2/SRR1930029.bam, Bowtie2/SRR1930030.bam, Bowtie2/SRR1930031.bam, Sambamba/SRR1930028.markdup.txt, Sambamba/SRR1930029.markdup.txt, Sambamba/SRR1930030.markdup.txt, Sambamba/SRR1930031.markdup.txt, filtered_bam/SRR1930028.filtered.bam, filtered_bam/SRR1930029.filtered.bam, filtered_bam/SRR1930030.filtered.bam, filtered_bam/SRR1930031.filtered.bam, bamCoverage/SRR1930028.seq_depth_norm.bw, bamCoverage/SRR1930029.seq_depth_norm.bw, bamCoverage/SRR1930030.seq_depth_norm.bw, bamCoverage/SRR1930031.seq_depth_norm.bw, bamCoverage/SRR1930028.filtered.seq_depth_norm.bw, bamCoverage/SRR1930029.filtered.seq_depth_norm.bw, bamCoverage/SRR1930030.filtered.seq_depth_norm.bw, bamCoverage/SRR1930031.filtered.seq_depth_norm.bw, deepTools_qc/bamPEFragmentSize/fragmentSize.metric.tsv, deepTools_qc/plotCoverage/read_coverage.tsv, deepTools_qc/plotCorrelation/correlation.pearson.read_coverage.tsv, deepTools_qc/plotCorrelation/correlation.spearman.read_coverage.tsv, deepTools_qc/plotPCA/PCA.read_coverage.tsv, deepTools_qc/estimateReadFiltering/SRR1930028_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/SRR1930029_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/SRR1930030_filtering_estimation.txt, deepTools_qc/estimateReadFiltering/SRR1930031_filtering_estimation.txt, multiQC/multiqc_report.html
+    jobid: 0
+    reason: Input files updated by another job: bamCoverage/SRR1930031.filtered.seq_depth_norm.bw, bamCoverage/SRR1930028.filtered.seq_depth_norm.bw, Bowtie2/SRR1930029.bam, bamCoverage/SRR1930028.seq_depth_norm.bw, Bowtie2/SRR1930031.bam, deepTools_qc/plotCoverage/read_coverage.tsv, bamCoverage/SRR1930031.seq_depth_norm.bw, filtered_bam/SRR1930030.filtered.bam, Sambamba/SRR1930031.markdup.txt, Sambamba/SRR1930029.markdup.txt, deepTools_qc/plotCorrelation/correlation.pearson.read_coverage.tsv, multiQC/multiqc_report.html, bamCoverage/SRR1930029.seq_depth_norm.bw, bamCoverage/SRR1930029.filtered.seq_depth_norm.bw, bamCoverage/SRR1930030.seq_depth_norm.bw, filtered_bam/SRR1930028.filtered.bam, filtered_bam/SRR1930029.filtered.bam, Bowtie2/SRR1930028.bam, deepTools_qc/plotCorrelation/correlation.spearman.read_coverage.tsv, Sambamba/SRR1930028.markdup.txt, deepTools_qc/estimateReadFiltering/SRR1930031_filtering_estimation.txt, deepTools_qc/plotPCA/PCA.read_coverage.tsv, deepTools_qc/bamPEFragmentSize/fragmentSize.metric.tsv, deepTools_qc/estimateReadFiltering/SRR1930030_filtering_estimation.txt, bamCoverage/SRR1930030.filtered.seq_depth_norm.bw, deepTools_qc/estimateReadFiltering/SRR1930028_filtering_estimation.txt, Sambamba/SRR1930030.markdup.txt, deepTools_qc/estimateReadFiltering/SRR1930029_filtering_estimation.txt, Bowtie2/SRR1930030.bam, filtered_bam/SRR1930031.filtered.bam
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+[Thu Jul 28 10:51:59 2022]
+Finished job 0.
+56 of 56 steps (100%) done
+Complete log: .snakemake/log/2022-07-28T103454.479338.snakemake.log

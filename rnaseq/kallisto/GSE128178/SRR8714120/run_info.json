@@ -1,0 +1,13 @@
+{
+	"n_targets": 118489,
+	"n_bootstraps": 0,
+	"n_processed": 30358276,
+	"n_pseudoaligned": 22067143,
+	"n_unique": 6755508,
+	"p_pseudoaligned": 72.7,
+	"p_unique": 22.3,
+	"kallisto_version": "0.48.0",
+	"index_version": 10,
+	"start_time": "Wed Jul 27 16:12:22 2022",
+	"call": "kallisto quant -t 16 --single -i annotation/mus_musculus/transcriptome.idx -o kallisto/GSE128178/SRR8714120 -l 200 -s 20 data/GSE128178/SRR8714120_1.fastq.gz"
+}

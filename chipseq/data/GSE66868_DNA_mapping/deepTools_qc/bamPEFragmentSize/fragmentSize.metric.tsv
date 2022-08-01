@@ -1,0 +1,7 @@
+	Frag. Sampled	Frag. Len. Min.	Frag. Len. 1st. Qu.	Frag. Len. Mean	Frag. Len. Median	Frag. Len. 3rd Qu.	Frag. Len. Max	Frag. Len. Std.	Frag. Med. Abs. Dev.	Frag. Len. 10%	Frag. Len. 20%	Frag. Len. 30%	Frag. Len. 40%	Frag. Len. 60%	Frag. Len. 70%	Frag. Len. 80%	Frag. Len. 90%	Frag. Len. 99%	Reads Sampled	Read Len. Min.	Read Len. 1st. Qu.	Read Len. Mean	Read Len. Median	Read Len. 3rd Qu.	Read Len. Max	Read Len. Std.	Read Med. Abs. Dev.	Read Len. 10%	Read Len. 20%	Read Len. 30%	Read Len. 40%	Read Len. 60%	Read Len. 70%	Read Len. 80%	Read Len. 90%	Read Len. 99%
+filtered_bam/SRR1914878.filtered.bam	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	42831099	51.0	51.0	51.0	51.0	51.0	51.0	0.0	0.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0
+filtered_bam/SRR1914879.filtered.bam	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	45528481	51.0	51.0	51.0	51.0	51.0	51.0	0.0	0.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0
+filtered_bam/SRR1914880.filtered.bam	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	42813390	51.0	51.0	51.0	51.0	51.0	51.0	0.0	0.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0
+filtered_bam/SRR1914881.filtered.bam	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	45768132	51.0	51.0	51.0	51.0	51.0	51.0	0.0	0.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0
+filtered_bam/SRR1914882.filtered.bam	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	44195874	51.0	51.0	51.0	51.0	51.0	51.0	0.0	0.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0
+filtered_bam/SRR1914883.filtered.bam	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	45994748	51.0	51.0	51.0	51.0	51.0	51.0	0.0	0.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0	51.0

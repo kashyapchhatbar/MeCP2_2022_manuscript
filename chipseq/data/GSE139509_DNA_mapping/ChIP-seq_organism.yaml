@@ -1,0 +1,19 @@
+blacklist_bed: '/datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/mm10-blacklist.v2.bed'
+bowtie2_index: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/BowtieIndex/genome
+bwa_index: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/BWAIndex/genome.fa
+bwameth_index: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/BWAmethIndex/genome.fa
+extended_coding_regions_gtf: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/annotation/genes.slop.gtf
+genes_bed: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/annotation/genes.bed
+genes_gtf: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/annotation/genes.gtf
+genome_2bit: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/genome_fasta/genome.2bit
+genome_dict: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/genome_fasta/genome.dict
+genome_fasta: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/genome_fasta/genome.fa
+genome_index: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/genome_fasta/genome.fa.fai
+genome_size: 2652783500
+hisat2_index: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/HISAT2Index/genome
+ignoreForNormalization: 'chrX chrY chrM GL456210.1 GL456211.1 GL456212.1 GL456213.1 GL456216.1 GL456219.1 GL456221.1 GL456233.1 GL456239.1 GL456350.1 GL456354.1 GL456359.1 GL456360.1 GL456366.1 GL456367.1 GL456368.1 GL456370.1 GL456372.1 GL456378.1 GL456379.1 GL456381.1 GL456382.1 GL456383.1 GL456385.1 GL456387.1 GL456389.1 GL456390.1 GL456392.1 GL456393.1 GL456394.1 GL456396.1 JH584292.1 JH584293.1 JH584294.1 JH584295.1 JH584296.1 JH584297.1 JH584298.1 JH584299.1 JH584300.1 JH584301.1 JH584302.1 JH584303.1 JH584304.1'
+known_splicesites: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/HISAT2Index/splice_sites.txt
+rmsk_file: ''
+spikein_blacklist_bed: ''
+spikein_genes_gtf: ''
+star_index: /datastore/homes3/kchhatba/temp/GRCm38_gencode_release19/STARIndex/

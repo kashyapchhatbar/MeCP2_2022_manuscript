@@ -1,0 +1,232 @@
+INFO  @ Thu, 28 Jul 2022 14:07:03: 
+# Command line: callpeak -t filtered_bam/SRR1914882.filtered.bam -c filtered_bam/SRR1914879.filtered.bam -f BAM -g 2620345972 -g mm -m 1 30 -p 0.2 --call-summits --keep-dup all --keep-dup all --outdir MACS2 --name SRR1914882.filtered.BAM --mfold 0 50 --extsize 150
+# ARGUMENTS LIST:
+# name = SRR1914882.filtered.BAM
+# format = BAM
+# ChIP-seq file = ['filtered_bam/SRR1914882.filtered.bam']
+# control file = ['filtered_bam/SRR1914879.filtered.bam']
+# effective genome size = 1.87e+09
+# band width = 300
+# model fold = [0, 50]
+# pvalue cutoff = 2.00e-01
+# qvalue will not be calculated and reported as -1 in the final output.
+# The maximum gap between significant sites is assigned as the read length/tag size.
+# The minimum length of peaks is assigned as the predicted fragment length "d".
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+# Searching for subpeak summits is on
+ 
+INFO  @ Thu, 28 Jul 2022 14:07:03: #1 read tag files... 
+INFO  @ Thu, 28 Jul 2022 14:07:03: #1 read treatment tags... 
+INFO  @ Thu, 28 Jul 2022 14:07:04:  1000000 
+INFO  @ Thu, 28 Jul 2022 14:07:06:  2000000 
+INFO  @ Thu, 28 Jul 2022 14:07:08:  3000000 
+INFO  @ Thu, 28 Jul 2022 14:07:10:  4000000 
+INFO  @ Thu, 28 Jul 2022 14:07:12:  5000000 
+INFO  @ Thu, 28 Jul 2022 14:07:13:  6000000 
+INFO  @ Thu, 28 Jul 2022 14:07:15:  7000000 
+INFO  @ Thu, 28 Jul 2022 14:07:17:  8000000 
+INFO  @ Thu, 28 Jul 2022 14:07:19:  9000000 
+INFO  @ Thu, 28 Jul 2022 14:07:21:  10000000 
+INFO  @ Thu, 28 Jul 2022 14:07:23:  11000000 
+INFO  @ Thu, 28 Jul 2022 14:07:25:  12000000 
+INFO  @ Thu, 28 Jul 2022 14:07:27:  13000000 
+INFO  @ Thu, 28 Jul 2022 14:07:29:  14000000 
+INFO  @ Thu, 28 Jul 2022 14:07:30:  15000000 
+INFO  @ Thu, 28 Jul 2022 14:07:32:  16000000 
+INFO  @ Thu, 28 Jul 2022 14:07:34:  17000000 
+INFO  @ Thu, 28 Jul 2022 14:07:36:  18000000 
+INFO  @ Thu, 28 Jul 2022 14:07:38:  19000000 
+INFO  @ Thu, 28 Jul 2022 14:07:40:  20000000 
+INFO  @ Thu, 28 Jul 2022 14:07:42:  21000000 
+INFO  @ Thu, 28 Jul 2022 14:07:44:  22000000 
+INFO  @ Thu, 28 Jul 2022 14:07:46:  23000000 
+INFO  @ Thu, 28 Jul 2022 14:07:47:  24000000 
+INFO  @ Thu, 28 Jul 2022 14:07:49:  25000000 
+INFO  @ Thu, 28 Jul 2022 14:07:51:  26000000 
+INFO  @ Thu, 28 Jul 2022 14:07:53:  27000000 
+INFO  @ Thu, 28 Jul 2022 14:07:55:  28000000 
+INFO  @ Thu, 28 Jul 2022 14:07:57:  29000000 
+INFO  @ Thu, 28 Jul 2022 14:07:58:  30000000 
+INFO  @ Thu, 28 Jul 2022 14:08:00:  31000000 
+INFO  @ Thu, 28 Jul 2022 14:08:02:  32000000 
+INFO  @ Thu, 28 Jul 2022 14:08:04:  33000000 
+INFO  @ Thu, 28 Jul 2022 14:08:06:  34000000 
+INFO  @ Thu, 28 Jul 2022 14:08:08:  35000000 
+INFO  @ Thu, 28 Jul 2022 14:08:10:  36000000 
+INFO  @ Thu, 28 Jul 2022 14:08:11:  37000000 
+INFO  @ Thu, 28 Jul 2022 14:08:13:  38000000 
+INFO  @ Thu, 28 Jul 2022 14:08:15:  39000000 
+INFO  @ Thu, 28 Jul 2022 14:08:17:  40000000 
+INFO  @ Thu, 28 Jul 2022 14:08:19:  41000000 
+INFO  @ Thu, 28 Jul 2022 14:08:21:  42000000 
+INFO  @ Thu, 28 Jul 2022 14:08:23:  43000000 
+INFO  @ Thu, 28 Jul 2022 14:08:25:  44000000 
+INFO  @ Thu, 28 Jul 2022 14:08:27:  45000000 
+INFO  @ Thu, 28 Jul 2022 14:08:28:  46000000 
+INFO  @ Thu, 28 Jul 2022 14:08:30:  47000000 
+INFO  @ Thu, 28 Jul 2022 14:08:32:  48000000 
+INFO  @ Thu, 28 Jul 2022 14:08:34:  49000000 
+INFO  @ Thu, 28 Jul 2022 14:08:36:  50000000 
+INFO  @ Thu, 28 Jul 2022 14:08:38:  51000000 
+INFO  @ Thu, 28 Jul 2022 14:08:40:  52000000 
+INFO  @ Thu, 28 Jul 2022 14:08:42:  53000000 
+INFO  @ Thu, 28 Jul 2022 14:08:44:  54000000 
+INFO  @ Thu, 28 Jul 2022 14:08:46:  55000000 
+INFO  @ Thu, 28 Jul 2022 14:08:47:  56000000 
+INFO  @ Thu, 28 Jul 2022 14:08:49:  57000000 
+INFO  @ Thu, 28 Jul 2022 14:08:51:  58000000 
+INFO  @ Thu, 28 Jul 2022 14:08:53:  59000000 
+INFO  @ Thu, 28 Jul 2022 14:08:55:  60000000 
+INFO  @ Thu, 28 Jul 2022 14:08:57:  61000000 
+INFO  @ Thu, 28 Jul 2022 14:08:59:  62000000 
+INFO  @ Thu, 28 Jul 2022 14:09:01:  63000000 
+INFO  @ Thu, 28 Jul 2022 14:09:03:  64000000 
+INFO  @ Thu, 28 Jul 2022 14:09:04:  65000000 
+INFO  @ Thu, 28 Jul 2022 14:09:06:  66000000 
+INFO  @ Thu, 28 Jul 2022 14:09:08:  67000000 
+INFO  @ Thu, 28 Jul 2022 14:09:10:  68000000 
+INFO  @ Thu, 28 Jul 2022 14:09:12:  69000000 
+INFO  @ Thu, 28 Jul 2022 14:09:14:  70000000 
+INFO  @ Thu, 28 Jul 2022 14:09:15:  71000000 
+INFO  @ Thu, 28 Jul 2022 14:09:17:  72000000 
+INFO  @ Thu, 28 Jul 2022 14:09:19:  73000000 
+INFO  @ Thu, 28 Jul 2022 14:09:21:  74000000 
+INFO  @ Thu, 28 Jul 2022 14:09:22:  75000000 
+INFO  @ Thu, 28 Jul 2022 14:09:24:  76000000 
+INFO  @ Thu, 28 Jul 2022 14:09:26:  77000000 
+INFO  @ Thu, 28 Jul 2022 14:09:28:  78000000 
+INFO  @ Thu, 28 Jul 2022 14:09:29:  79000000 
+INFO  @ Thu, 28 Jul 2022 14:09:31:  80000000 
+INFO  @ Thu, 28 Jul 2022 14:09:33:  81000000 
+INFO  @ Thu, 28 Jul 2022 14:09:34:  82000000 
+INFO  @ Thu, 28 Jul 2022 14:09:36:  83000000 
+INFO  @ Thu, 28 Jul 2022 14:09:38:  84000000 
+INFO  @ Thu, 28 Jul 2022 14:09:40:  85000000 
+INFO  @ Thu, 28 Jul 2022 14:09:42:  86000000 
+INFO  @ Thu, 28 Jul 2022 14:09:43:  87000000 
+INFO  @ Thu, 28 Jul 2022 14:09:45:  88000000 
+INFO  @ Thu, 28 Jul 2022 14:09:47:  89000000 
+INFO  @ Thu, 28 Jul 2022 14:09:49:  90000000 
+INFO  @ Thu, 28 Jul 2022 14:09:53: 90420874 reads have been read. 
+INFO  @ Thu, 28 Jul 2022 14:09:54: #1.2 read input tags... 
+INFO  @ Thu, 28 Jul 2022 14:09:56:  1000000 
+INFO  @ Thu, 28 Jul 2022 14:09:58:  2000000 
+INFO  @ Thu, 28 Jul 2022 14:09:59:  3000000 
+INFO  @ Thu, 28 Jul 2022 14:10:01:  4000000 
+INFO  @ Thu, 28 Jul 2022 14:10:03:  5000000 
+INFO  @ Thu, 28 Jul 2022 14:10:05:  6000000 
+INFO  @ Thu, 28 Jul 2022 14:10:07:  7000000 
+INFO  @ Thu, 28 Jul 2022 14:10:08:  8000000 
+INFO  @ Thu, 28 Jul 2022 14:10:10:  9000000 
+INFO  @ Thu, 28 Jul 2022 14:10:12:  10000000 
+INFO  @ Thu, 28 Jul 2022 14:10:14:  11000000 
+INFO  @ Thu, 28 Jul 2022 14:10:16:  12000000 
+INFO  @ Thu, 28 Jul 2022 14:10:17:  13000000 
+INFO  @ Thu, 28 Jul 2022 14:10:19:  14000000 
+INFO  @ Thu, 28 Jul 2022 14:10:21:  15000000 
+INFO  @ Thu, 28 Jul 2022 14:10:23:  16000000 
+INFO  @ Thu, 28 Jul 2022 14:10:25:  17000000 
+INFO  @ Thu, 28 Jul 2022 14:10:26:  18000000 
+INFO  @ Thu, 28 Jul 2022 14:10:28:  19000000 
+INFO  @ Thu, 28 Jul 2022 14:10:30:  20000000 
+INFO  @ Thu, 28 Jul 2022 14:10:32:  21000000 
+INFO  @ Thu, 28 Jul 2022 14:10:33:  22000000 
+INFO  @ Thu, 28 Jul 2022 14:10:35:  23000000 
+INFO  @ Thu, 28 Jul 2022 14:10:37:  24000000 
+INFO  @ Thu, 28 Jul 2022 14:10:39:  25000000 
+INFO  @ Thu, 28 Jul 2022 14:10:41:  26000000 
+INFO  @ Thu, 28 Jul 2022 14:10:42:  27000000 
+INFO  @ Thu, 28 Jul 2022 14:10:44:  28000000 
+INFO  @ Thu, 28 Jul 2022 14:10:46:  29000000 
+INFO  @ Thu, 28 Jul 2022 14:10:48:  30000000 
+INFO  @ Thu, 28 Jul 2022 14:10:49:  31000000 
+INFO  @ Thu, 28 Jul 2022 14:10:51:  32000000 
+INFO  @ Thu, 28 Jul 2022 14:10:53:  33000000 
+INFO  @ Thu, 28 Jul 2022 14:10:55:  34000000 
+INFO  @ Thu, 28 Jul 2022 14:10:56:  35000000 
+INFO  @ Thu, 28 Jul 2022 14:10:58:  36000000 
+INFO  @ Thu, 28 Jul 2022 14:11:00:  37000000 
+INFO  @ Thu, 28 Jul 2022 14:11:02:  38000000 
+INFO  @ Thu, 28 Jul 2022 14:11:03:  39000000 
+INFO  @ Thu, 28 Jul 2022 14:11:05:  40000000 
+INFO  @ Thu, 28 Jul 2022 14:11:07:  41000000 
+INFO  @ Thu, 28 Jul 2022 14:11:09:  42000000 
+INFO  @ Thu, 28 Jul 2022 14:11:11:  43000000 
+INFO  @ Thu, 28 Jul 2022 14:11:12:  44000000 
+INFO  @ Thu, 28 Jul 2022 14:11:14:  45000000 
+INFO  @ Thu, 28 Jul 2022 14:11:16:  46000000 
+INFO  @ Thu, 28 Jul 2022 14:11:18:  47000000 
+INFO  @ Thu, 28 Jul 2022 14:11:20:  48000000 
+INFO  @ Thu, 28 Jul 2022 14:11:21:  49000000 
+INFO  @ Thu, 28 Jul 2022 14:11:23:  50000000 
+INFO  @ Thu, 28 Jul 2022 14:11:25:  51000000 
+INFO  @ Thu, 28 Jul 2022 14:11:27:  52000000 
+INFO  @ Thu, 28 Jul 2022 14:11:28:  53000000 
+INFO  @ Thu, 28 Jul 2022 14:11:30:  54000000 
+INFO  @ Thu, 28 Jul 2022 14:11:32:  55000000 
+INFO  @ Thu, 28 Jul 2022 14:11:34:  56000000 
+INFO  @ Thu, 28 Jul 2022 14:11:36:  57000000 
+INFO  @ Thu, 28 Jul 2022 14:11:37:  58000000 
+INFO  @ Thu, 28 Jul 2022 14:11:39:  59000000 
+INFO  @ Thu, 28 Jul 2022 14:11:41:  60000000 
+INFO  @ Thu, 28 Jul 2022 14:11:43:  61000000 
+INFO  @ Thu, 28 Jul 2022 14:11:45:  62000000 
+INFO  @ Thu, 28 Jul 2022 14:11:46:  63000000 
+INFO  @ Thu, 28 Jul 2022 14:11:48:  64000000 
+INFO  @ Thu, 28 Jul 2022 14:11:50:  65000000 
+INFO  @ Thu, 28 Jul 2022 14:11:52:  66000000 
+INFO  @ Thu, 28 Jul 2022 14:11:53:  67000000 
+INFO  @ Thu, 28 Jul 2022 14:11:55:  68000000 
+INFO  @ Thu, 28 Jul 2022 14:11:57:  69000000 
+INFO  @ Thu, 28 Jul 2022 14:11:59:  70000000 
+INFO  @ Thu, 28 Jul 2022 14:12:01:  71000000 
+INFO  @ Thu, 28 Jul 2022 14:12:02:  72000000 
+INFO  @ Thu, 28 Jul 2022 14:12:04:  73000000 
+INFO  @ Thu, 28 Jul 2022 14:12:06:  74000000 
+INFO  @ Thu, 28 Jul 2022 14:12:08:  75000000 
+INFO  @ Thu, 28 Jul 2022 14:12:10:  76000000 
+INFO  @ Thu, 28 Jul 2022 14:12:11:  77000000 
+INFO  @ Thu, 28 Jul 2022 14:12:13:  78000000 
+INFO  @ Thu, 28 Jul 2022 14:12:15:  79000000 
+INFO  @ Thu, 28 Jul 2022 14:12:17:  80000000 
+INFO  @ Thu, 28 Jul 2022 14:12:18:  81000000 
+INFO  @ Thu, 28 Jul 2022 14:12:20:  82000000 
+INFO  @ Thu, 28 Jul 2022 14:12:22:  83000000 
+INFO  @ Thu, 28 Jul 2022 14:12:23:  84000000 
+INFO  @ Thu, 28 Jul 2022 14:12:25:  85000000 
+INFO  @ Thu, 28 Jul 2022 14:12:27:  86000000 
+INFO  @ Thu, 28 Jul 2022 14:12:29:  87000000 
+INFO  @ Thu, 28 Jul 2022 14:12:31:  88000000 
+INFO  @ Thu, 28 Jul 2022 14:12:32:  89000000 
+INFO  @ Thu, 28 Jul 2022 14:12:34:  90000000 
+INFO  @ Thu, 28 Jul 2022 14:12:36:  91000000 
+INFO  @ Thu, 28 Jul 2022 14:12:38:  92000000 
+INFO  @ Thu, 28 Jul 2022 14:12:39:  93000000 
+INFO  @ Thu, 28 Jul 2022 14:12:44: 93485574 reads have been read. 
+INFO  @ Thu, 28 Jul 2022 14:12:45: #1 tag size is determined as 51 bps 
+INFO  @ Thu, 28 Jul 2022 14:12:45: #1 tag size = 51.0 
+INFO  @ Thu, 28 Jul 2022 14:12:45: #1  total tags in treatment: 90420874 
+INFO  @ Thu, 28 Jul 2022 14:12:45: #1  total tags in control: 93485574 
+INFO  @ Thu, 28 Jul 2022 14:12:45: #1 finished! 
+INFO  @ Thu, 28 Jul 2022 14:12:45: #2 Build Peak Model... 
+INFO  @ Thu, 28 Jul 2022 14:12:45: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Thu, 28 Jul 2022 14:13:32: #2 number of paired peaks: 2757713 
+INFO  @ Thu, 28 Jul 2022 14:13:32: start model_add_line... 
+INFO  @ Thu, 28 Jul 2022 14:13:45: start X-correlation... 
+INFO  @ Thu, 28 Jul 2022 14:13:45: end of X-cor 
+INFO  @ Thu, 28 Jul 2022 14:13:45: #2 finished! 
+INFO  @ Thu, 28 Jul 2022 14:13:45: #2 predicted fragment length is 298 bps 
+INFO  @ Thu, 28 Jul 2022 14:13:45: #2 alternative fragment length(s) may be 138,298 bps 
+INFO  @ Thu, 28 Jul 2022 14:13:45: #2.2 Generate R script for model : MACS2/SRR1914882.filtered.BAM_model.r 
+INFO  @ Thu, 28 Jul 2022 14:13:45: #3 Call peaks... 
+INFO  @ Thu, 28 Jul 2022 14:13:45: #3 Going to call summits inside each peak ... 
+INFO  @ Thu, 28 Jul 2022 14:13:45: #3 Call peaks with given -log10pvalue cutoff: 0.69897 ... 
+INFO  @ Thu, 28 Jul 2022 14:13:45: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Thu, 28 Jul 2022 14:24:36: #3 Call peaks for each chromosome... 
+INFO  @ Thu, 28 Jul 2022 14:27:23: #4 Write output xls file... MACS2/SRR1914882.filtered.BAM_peaks.xls 
+INFO  @ Thu, 28 Jul 2022 14:27:23: #4 Write peak in narrowPeak format file... MACS2/SRR1914882.filtered.BAM_peaks.narrowPeak 
+INFO  @ Thu, 28 Jul 2022 14:27:24: #4 Write summits bed file... MACS2/SRR1914882.filtered.BAM_summits.bed 
+INFO  @ Thu, 28 Jul 2022 14:27:24: Done! 

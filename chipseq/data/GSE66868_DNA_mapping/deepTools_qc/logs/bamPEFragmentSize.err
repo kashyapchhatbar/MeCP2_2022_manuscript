@@ -1,0 +1,2 @@
+findfont: Font family ['sans-serif'] not found. Falling back to DejaVu Sans.
+findfont: Generic family 'sans-serif' not found because none of the following families were found: Fira Sans OT, Helvetica, Arial, Open Sans, sans-serif

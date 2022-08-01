@@ -1,0 +1,20 @@
+Module	Section	Sample Name	Source
+deepTools	bamPEFragmentSize	fragmentSize.metric	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/deepTools_qc/bamPEFragmentSize/fragmentSize.metric.tsv
+deepTools	estimateReadFiltering	SRR1914880_filtering_estimation	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/deepTools_qc/estimateReadFiltering/SRR1914880_filtering_estimation.txt
+deepTools	estimateReadFiltering	SRR1914879_filtering_estimation	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/deepTools_qc/estimateReadFiltering/SRR1914879_filtering_estimation.txt
+deepTools	estimateReadFiltering	SRR1914878_filtering_estimation	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/deepTools_qc/estimateReadFiltering/SRR1914878_filtering_estimation.txt
+deepTools	estimateReadFiltering	SRR1914882_filtering_estimation	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/deepTools_qc/estimateReadFiltering/SRR1914882_filtering_estimation.txt
+deepTools	estimateReadFiltering	SRR1914883_filtering_estimation	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/deepTools_qc/estimateReadFiltering/SRR1914883_filtering_estimation.txt
+deepTools	estimateReadFiltering	SRR1914881_filtering_estimation	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/deepTools_qc/estimateReadFiltering/SRR1914881_filtering_estimation.txt
+Samtools	flagstat	SRR1914882	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Sambamba/SRR1914882.markdup.txt
+Samtools	flagstat	SRR1914880	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Sambamba/SRR1914880.markdup.txt
+Samtools	flagstat	SRR1914881	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Sambamba/SRR1914881.markdup.txt
+Samtools	flagstat	SRR1914879	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Sambamba/SRR1914879.markdup.txt
+Samtools	flagstat	SRR1914878	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Sambamba/SRR1914878.markdup.txt
+Samtools	flagstat	SRR1914883	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Sambamba/SRR1914883.markdup.txt
+Bowtie 2 / HiSAT2	all_sections	SRR1914881.Bowtie2	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Bowtie2/SRR1914881.Bowtie2_summary.txt
+Bowtie 2 / HiSAT2	all_sections	SRR1914878.Bowtie2	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Bowtie2/SRR1914878.Bowtie2_summary.txt
+Bowtie 2 / HiSAT2	all_sections	SRR1914879.Bowtie2	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Bowtie2/SRR1914879.Bowtie2_summary.txt
+Bowtie 2 / HiSAT2	all_sections	SRR1914880.Bowtie2	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Bowtie2/SRR1914880.Bowtie2_summary.txt
+Bowtie 2 / HiSAT2	all_sections	SRR1914882.Bowtie2	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Bowtie2/SRR1914882.Bowtie2_summary.txt
+Bowtie 2 / HiSAT2	all_sections	SRR1914883.Bowtie2	/datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/Bowtie2/SRR1914883.Bowtie2_summary.txt

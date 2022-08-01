@@ -1,0 +1,318 @@
+/localdisk/home/kchhatba/mambaforge/envs/snakePipes/bin/ChIP-seq -d . --singleEnd --windowSize 1000 --bwBinSize 1000 --fragmentLength 150 --local -j 196 --peakCaller MACS2 --peakCallerOptions -g mm -m 1 30 -p 0.2 --call-summits --keep-dup all --bigWigType log2ratio GRCm37_gencode_release1 ../GSE66868.ChIP.dict.yaml
+
+TMPDIR=/datastore/homes3/kchhatba/temp PYTHONNOUSERSITE=True /localdisk/home/kchhatba/mambaforge/envs/snakePipes/bin/snakemake --use-conda --conda-prefix /localdisk/home/kchhatba/mambaforge/envs --latency-wait 300 --snakefile /localdisk/home/kchhatba/mambaforge/envs/snakePipes/lib/python3.10/site-packages/snakePipes/workflows/ChIP-seq/Snakefile --jobs 196 --directory /datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping --configfile /datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE66868_DNA_mapping/ChIP-seq.config.yaml --keep-going
+
+
+---- This analysis has been done using snakePipes version 2.5.3 ----
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 196
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count    min threads    max threads
+------------------------  -------  -------------  -------------
+MACS2                           3              1              1
+MACS2_peak_qc                   3              1              1
+all                             1              1              1
+bamCompare_log2                 3             16             16
+convert_flagstat_output         6              1              1
+plotFingerprint                 1             24             24
+qc_report_all                   1              1              1
+report_flagstat_all_data        1              1              1
+total                          19              1             24
+
+Select jobs to execute...
+
+[Thu Jul 28 14:07:00 2022]
+rule convert_flagstat_output:
+    input: Sambamba/SRR1914879.markdup.txt
+    output: Sambamba/SRR1914879.dup.converted.tsv
+    log: Sambamba/logs/SRR1914879.convert_flagstat_output.log
+    jobid: 14
+    reason: Missing output files: Sambamba/SRR1914879.dup.converted.tsv
+    wildcards: sample=SRR1914879
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 14:07:00 2022]
+rule convert_flagstat_output:
+    input: Sambamba/SRR1914881.markdup.txt
+    output: Sambamba/SRR1914881.dup.converted.tsv
+    log: Sambamba/logs/SRR1914881.convert_flagstat_output.log
+    jobid: 16
+    reason: Missing output files: Sambamba/SRR1914881.dup.converted.tsv
+    wildcards: sample=SRR1914881
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 14:07:00 2022]
+rule convert_flagstat_output:
+    input: Sambamba/SRR1914883.markdup.txt
+    output: Sambamba/SRR1914883.dup.converted.tsv
+    log: Sambamba/logs/SRR1914883.convert_flagstat_output.log
+    jobid: 18
+    reason: Missing output files: Sambamba/SRR1914883.dup.converted.tsv
+    wildcards: sample=SRR1914883
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 14:07:00 2022]
+rule bamCompare_log2:
+    input: filtered_bam/SRR1914882.filtered.bam, filtered_bam/SRR1914882.filtered.bam.bai, filtered_bam/SRR1914879.filtered.bam, filtered_bam/SRR1914879.filtered.bam.bai
+    output: deepTools_ChIP/bamCompare/SRR1914882.filtered.log2ratio.over_SRR1914879.bw
+    log: deepTools_ChIP/logs/bamCompare.log2ratio.SRR1914882.SRR1914879.filtered.out, deepTools_ChIP/logs/bamCompare.log2ratio.SRR1914882.SRR1914879.filtered.err
+    jobid: 3
+    benchmark: deepTools_ChIP/.benchmark/bamCompare.log2ratio.SRR1914882.SRR1914879.filtered.benchmark
+    reason: Missing output files: deepTools_ChIP/bamCompare/SRR1914882.filtered.log2ratio.over_SRR1914879.bw
+    wildcards: chip_sample=SRR1914882, control_name=SRR1914879
+    threads: 16
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 14:07:00 2022]
+rule MACS2:
+    input: filtered_bam/SRR1914881.filtered.bam, filtered_bam/SRR1914878.filtered.bam
+    output: MACS2/SRR1914881.filtered.BAM_peaks.xls
+    log: MACS2/logs/MACS2.SRR1914881.filtered.out, MACS2/logs/MACS2.SRR1914881.filtered.err
+    jobid: 5
+    benchmark: MACS2/.benchmark/MACS2.SRR1914881.filtered.benchmark
+    reason: Missing output files: MACS2/SRR1914881.filtered.BAM_peaks.xls
+    wildcards: chip_sample=SRR1914881
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/ab713b15b628540f558bb8c1820e193f
+
+[Thu Jul 28 14:07:00 2022]
+rule MACS2:
+    input: filtered_bam/SRR1914883.filtered.bam, filtered_bam/SRR1914880.filtered.bam
+    output: MACS2/SRR1914883.filtered.BAM_peaks.xls
+    log: MACS2/logs/MACS2.SRR1914883.filtered.out, MACS2/logs/MACS2.SRR1914883.filtered.err
+    jobid: 7
+    benchmark: MACS2/.benchmark/MACS2.SRR1914883.filtered.benchmark
+    reason: Missing output files: MACS2/SRR1914883.filtered.BAM_peaks.xls
+    wildcards: chip_sample=SRR1914883
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/ab713b15b628540f558bb8c1820e193f
+
+[Thu Jul 28 14:07:00 2022]
+rule convert_flagstat_output:
+    input: Sambamba/SRR1914878.markdup.txt
+    output: Sambamba/SRR1914878.dup.converted.tsv
+    log: Sambamba/logs/SRR1914878.convert_flagstat_output.log
+    jobid: 13
+    reason: Missing output files: Sambamba/SRR1914878.dup.converted.tsv
+    wildcards: sample=SRR1914878
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 14:07:00 2022]
+rule convert_flagstat_output:
+    input: Sambamba/SRR1914880.markdup.txt
+    output: Sambamba/SRR1914880.dup.converted.tsv
+    log: Sambamba/logs/SRR1914880.convert_flagstat_output.log
+    jobid: 15
+    reason: Missing output files: Sambamba/SRR1914880.dup.converted.tsv
+    wildcards: sample=SRR1914880
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 14:07:00 2022]
+rule plotFingerprint:
+    input: filtered_bam/SRR1914878.filtered.bam, filtered_bam/SRR1914879.filtered.bam, filtered_bam/SRR1914880.filtered.bam, filtered_bam/SRR1914881.filtered.bam, filtered_bam/SRR1914882.filtered.bam, filtered_bam/SRR1914883.filtered.bam, filtered_bam/SRR1914878.filtered.bam.bai, filtered_bam/SRR1914879.filtered.bam.bai, filtered_bam/SRR1914880.filtered.bam.bai, filtered_bam/SRR1914881.filtered.bam.bai, filtered_bam/SRR1914882.filtered.bam.bai, filtered_bam/SRR1914883.filtered.bam.bai
+    output: deepTools_ChIP/plotFingerprint/plotFingerprint.metrics.txt
+    log: deepTools_ChIP/logs/plotFingerprint.out, deepTools_ChIP/logs/plotFingerprint.err
+    jobid: 1
+    benchmark: deepTools_ChIP/.benchmark/plotFingerprint.benchmark
+    reason: Missing output files: deepTools_ChIP/plotFingerprint/plotFingerprint.metrics.txt
+    threads: 24
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 14:07:00 2022]
+rule convert_flagstat_output:
+    input: Sambamba/SRR1914882.markdup.txt
+    output: Sambamba/SRR1914882.dup.converted.tsv
+    log: Sambamba/logs/SRR1914882.convert_flagstat_output.log
+    jobid: 17
+    reason: Missing output files: Sambamba/SRR1914882.dup.converted.tsv
+    wildcards: sample=SRR1914882
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+[Thu Jul 28 14:07:00 2022]
+rule bamCompare_log2:
+    input: filtered_bam/SRR1914881.filtered.bam, filtered_bam/SRR1914881.filtered.bam.bai, filtered_bam/SRR1914878.filtered.bam, filtered_bam/SRR1914878.filtered.bam.bai
+    output: deepTools_ChIP/bamCompare/SRR1914881.filtered.log2ratio.over_SRR1914878.bw
+    log: deepTools_ChIP/logs/bamCompare.log2ratio.SRR1914881.SRR1914878.filtered.out, deepTools_ChIP/logs/bamCompare.log2ratio.SRR1914881.SRR1914878.filtered.err
+    jobid: 2
+    benchmark: deepTools_ChIP/.benchmark/bamCompare.log2ratio.SRR1914881.SRR1914878.filtered.benchmark
+    reason: Missing output files: deepTools_ChIP/bamCompare/SRR1914881.filtered.log2ratio.over_SRR1914878.bw
+    wildcards: chip_sample=SRR1914881, control_name=SRR1914878
+    threads: 16
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 14:07:00 2022]
+rule bamCompare_log2:
+    input: filtered_bam/SRR1914883.filtered.bam, filtered_bam/SRR1914883.filtered.bam.bai, filtered_bam/SRR1914880.filtered.bam, filtered_bam/SRR1914880.filtered.bam.bai
+    output: deepTools_ChIP/bamCompare/SRR1914883.filtered.log2ratio.over_SRR1914880.bw
+    log: deepTools_ChIP/logs/bamCompare.log2ratio.SRR1914883.SRR1914880.filtered.out, deepTools_ChIP/logs/bamCompare.log2ratio.SRR1914883.SRR1914880.filtered.err
+    jobid: 4
+    benchmark: deepTools_ChIP/.benchmark/bamCompare.log2ratio.SRR1914883.SRR1914880.filtered.benchmark
+    reason: Missing output files: deepTools_ChIP/bamCompare/SRR1914883.filtered.log2ratio.over_SRR1914880.bw
+    wildcards: chip_sample=SRR1914883, control_name=SRR1914880
+    threads: 16
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+
+[Thu Jul 28 14:07:00 2022]
+rule MACS2:
+    input: filtered_bam/SRR1914882.filtered.bam, filtered_bam/SRR1914879.filtered.bam
+    output: MACS2/SRR1914882.filtered.BAM_peaks.xls
+    log: MACS2/logs/MACS2.SRR1914882.filtered.out, MACS2/logs/MACS2.SRR1914882.filtered.err
+    jobid: 6
+    benchmark: MACS2/.benchmark/MACS2.SRR1914882.filtered.benchmark
+    reason: Missing output files: MACS2/SRR1914882.filtered.BAM_peaks.xls
+    wildcards: chip_sample=SRR1914882
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/ab713b15b628540f558bb8c1820e193f
+[Thu Jul 28 14:07:01 2022]
+Finished job 14.
+1 of 19 steps (5%) done
+[Thu Jul 28 14:07:01 2022]
+Finished job 16.
+2 of 19 steps (11%) done
+[Thu Jul 28 14:07:01 2022]
+Finished job 18.
+3 of 19 steps (16%) done
+[Thu Jul 28 14:07:01 2022]
+Finished job 13.
+4 of 19 steps (21%) done
+[Thu Jul 28 14:07:01 2022]
+Finished job 15.
+5 of 19 steps (26%) done
+[Thu Jul 28 14:07:01 2022]
+Finished job 17.
+6 of 19 steps (32%) done
+Select jobs to execute...
+
+[Thu Jul 28 14:07:01 2022]
+rule report_flagstat_all_data:
+    input: Sambamba/SRR1914878.dup.converted.tsv, Sambamba/SRR1914879.dup.converted.tsv, Sambamba/SRR1914880.dup.converted.tsv, Sambamba/SRR1914881.dup.converted.tsv, Sambamba/SRR1914882.dup.converted.tsv, Sambamba/SRR1914883.dup.converted.tsv
+    output: Sambamba/flagstat_report_all.tsv
+    log: Sambamba/logs/report_flagstat_all_data.log
+    jobid: 12
+    reason: Missing output files: Sambamba/flagstat_report_all.tsv; Input files updated by another job: Sambamba/SRR1914878.dup.converted.tsv, Sambamba/SRR1914879.dup.converted.tsv, Sambamba/SRR1914883.dup.converted.tsv, Sambamba/SRR1914882.dup.converted.tsv, Sambamba/SRR1914880.dup.converted.tsv, Sambamba/SRR1914881.dup.converted.tsv
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+[Thu Jul 28 14:07:01 2022]
+Finished job 12.
+7 of 19 steps (37%) done
+Removing temporary output Sambamba/SRR1914878.dup.converted.tsv.
+Removing temporary output Sambamba/SRR1914879.dup.converted.tsv.
+Removing temporary output Sambamba/SRR1914880.dup.converted.tsv.
+Removing temporary output Sambamba/SRR1914881.dup.converted.tsv.
+Removing temporary output Sambamba/SRR1914882.dup.converted.tsv.
+Removing temporary output Sambamba/SRR1914883.dup.converted.tsv.
+[Thu Jul 28 14:09:37 2022]
+Finished job 4.
+8 of 19 steps (42%) done
+[Thu Jul 28 14:09:38 2022]
+Finished job 2.
+9 of 19 steps (47%) done
+[Thu Jul 28 14:09:44 2022]
+Finished job 3.
+10 of 19 steps (53%) done
+[Thu Jul 28 14:26:23 2022]
+Finished job 7.
+11 of 19 steps (58%) done
+Select jobs to execute...
+
+[Thu Jul 28 14:26:23 2022]
+rule MACS2_peak_qc:
+    input: filtered_bam/SRR1914883.filtered.bam, MACS2/SRR1914883.filtered.BAM_peaks.xls
+    output: MACS2/SRR1914883.filtered.BAM_peaks.qc.txt
+    jobid: 10
+    benchmark: MACS2/.benchmark/MACS2_peak_qc.SRR1914883.filtered.benchmark
+    reason: Missing output files: MACS2/SRR1914883.filtered.BAM_peaks.qc.txt; Input files updated by another job: MACS2/SRR1914883.filtered.BAM_peaks.xls
+    wildcards: sample=SRR1914883
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 14:27:10 2022]
+Finished job 5.
+12 of 19 steps (63%) done
+Select jobs to execute...
+
+[Thu Jul 28 14:27:10 2022]
+rule MACS2_peak_qc:
+    input: filtered_bam/SRR1914881.filtered.bam, MACS2/SRR1914881.filtered.BAM_peaks.xls
+    output: MACS2/SRR1914881.filtered.BAM_peaks.qc.txt
+    jobid: 8
+    benchmark: MACS2/.benchmark/MACS2_peak_qc.SRR1914881.filtered.benchmark
+    reason: Missing output files: MACS2/SRR1914881.filtered.BAM_peaks.qc.txt; Input files updated by another job: MACS2/SRR1914881.filtered.BAM_peaks.xls
+    wildcards: sample=SRR1914881
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 14:27:24 2022]
+Finished job 6.
+13 of 19 steps (68%) done
+Select jobs to execute...
+
+[Thu Jul 28 14:27:24 2022]
+rule MACS2_peak_qc:
+    input: filtered_bam/SRR1914882.filtered.bam, MACS2/SRR1914882.filtered.BAM_peaks.xls
+    output: MACS2/SRR1914882.filtered.BAM_peaks.qc.txt
+    jobid: 9
+    benchmark: MACS2/.benchmark/MACS2_peak_qc.SRR1914882.filtered.benchmark
+    reason: Missing output files: MACS2/SRR1914882.filtered.BAM_peaks.qc.txt; Input files updated by another job: MACS2/SRR1914882.filtered.BAM_peaks.xls
+    wildcards: sample=SRR1914882
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+Activating conda environment: ../../../../../../../../../../localdisk/home/kchhatba/mambaforge/envs/13f8b7bb80e180b51e4fd84d66270711
+[Thu Jul 28 14:29:19 2022]
+Finished job 10.
+14 of 19 steps (74%) done
+[Thu Jul 28 14:29:59 2022]
+Finished job 8.
+15 of 19 steps (79%) done
+[Thu Jul 28 14:30:14 2022]
+Finished job 9.
+16 of 19 steps (84%) done
+[Thu Jul 28 14:42:51 2022]
+Finished job 1.
+17 of 19 steps (89%) done
+Select jobs to execute...
+
+[Thu Jul 28 14:42:51 2022]
+rule qc_report_all:
+    input: Sambamba/flagstat_report_all.tsv, deepTools_ChIP/plotFingerprint/plotFingerprint.metrics.txt
+    output: QC_report/QC_report_all.tsv
+    log: QC_report/logs/qc_report_all.log
+    jobid: 11
+    reason: Missing output files: QC_report/QC_report_all.tsv; Input files updated by another job: Sambamba/flagstat_report_all.tsv, deepTools_ChIP/plotFingerprint/plotFingerprint.metrics.txt
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+[Thu Jul 28 14:42:51 2022]
+Finished job 11.
+18 of 19 steps (95%) done
+Select jobs to execute...
+
+[Thu Jul 28 14:42:51 2022]
+localrule all:
+    input: deepTools_ChIP/plotFingerprint/plotFingerprint.metrics.txt, deepTools_ChIP/bamCompare/SRR1914881.filtered.log2ratio.over_SRR1914878.bw, deepTools_ChIP/bamCompare/SRR1914882.filtered.log2ratio.over_SRR1914879.bw, deepTools_ChIP/bamCompare/SRR1914883.filtered.log2ratio.over_SRR1914880.bw, MACS2/SRR1914881.filtered.BAM_peaks.xls, MACS2/SRR1914882.filtered.BAM_peaks.xls, MACS2/SRR1914883.filtered.BAM_peaks.xls, MACS2/SRR1914881.filtered.BAM_peaks.qc.txt, MACS2/SRR1914882.filtered.BAM_peaks.qc.txt, MACS2/SRR1914883.filtered.BAM_peaks.qc.txt, QC_report/QC_report_all.tsv
+    jobid: 0
+    reason: Input files updated by another job: MACS2/SRR1914881.filtered.BAM_peaks.xls, deepTools_ChIP/bamCompare/SRR1914882.filtered.log2ratio.over_SRR1914879.bw, QC_report/QC_report_all.tsv, MACS2/SRR1914883.filtered.BAM_peaks.xls, deepTools_ChIP/plotFingerprint/plotFingerprint.metrics.txt, deepTools_ChIP/bamCompare/SRR1914881.filtered.log2ratio.over_SRR1914878.bw, deepTools_ChIP/bamCompare/SRR1914883.filtered.log2ratio.over_SRR1914880.bw, MACS2/SRR1914882.filtered.BAM_peaks.qc.txt, MACS2/SRR1914882.filtered.BAM_peaks.xls, MACS2/SRR1914881.filtered.BAM_peaks.qc.txt, MACS2/SRR1914883.filtered.BAM_peaks.qc.txt
+    resources: tmpdir=/datastore/homes3/kchhatba/temp
+
+[Thu Jul 28 14:42:51 2022]
+Finished job 0.
+19 of 19 steps (100%) done
+Complete log: .snakemake/log/2022-07-28T140659.119140.snakemake.log

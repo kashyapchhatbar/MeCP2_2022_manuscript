@@ -1,0 +1,2 @@
+Sample	Total Reads	Mapped Reads	Alignments in blacklisted regions	Estimated mapped reads filtered	Below MAPQ	Missing Flags	Excluded Flags	Internally-determined Duplicates	Marked Duplicates	Singletons	Wrong strand
+Bowtie2/SRR10357004.bam	30868793	30101184	0	9408145.0	0.0	0.0	0.0	0.0	9408145.0	0.0	0.0

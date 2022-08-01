@@ -1,0 +1,8 @@
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/008/SRR1914878/SRR1914878.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/009/SRR1914879/SRR1914879.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/000/SRR1914880/SRR1914880.fastq.gz
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1633nnn/GSM1633577/suppl/GSM1633577_input.wig.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/001/SRR1914881/SRR1914881.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/002/SRR1914882/SRR1914882.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR191/003/SRR1914883/SRR1914883.fastq.gz
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1633nnn/GSM1633578/suppl/GSM1633578_MeCP2.wig.gz

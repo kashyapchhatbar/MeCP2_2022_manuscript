@@ -1,0 +1,30 @@
+rule repeats:
+    input:
+        expand("GSE84533_hypothalamus_rep123.{a}.{b}.{c}.bedGraph.gz", a=["CA", "CG", "CAC"], b=[10,5], c=["CAn", "CANn", "except_CAn"]),
+        expand("GSE84533_hypothalamus_rep123.{a}.{b}.subtract.{c}.bedGraph.gz", a=["CA", "CAC"], b=[10,5], c=["CAn"]),
+    
+
+rule intersect:
+    input:
+        bedgraph="GSE84533_hypothalamus_rep123.{a}.{b}.bedGraph.gz",
+        loci="../loci/mm9.{c}.bed"
+    output: "GSE84533_hypothalamus_rep123.{a}.{b}.{c}.bedGraph.gz"
+    shell: "bedtools intersect -a {input.bedgraph} -b {input.loci} -u | gzip -c > {output}"
+
+rule subtract:
+    input:
+        bedgraph="GSE84533_hypothalamus_rep123.{a}.{b}.bedGraph.gz",
+        loci="../loci/mm9.{c}.bed"
+    output: "GSE84533_hypothalamus_rep123.{a}.{b}.subtract.{c}.bedGraph.gz"
+    shell: "bedtools subtract -a {input.bedgraph} -b {input.loci} -u | gzip -c > {output}"
+    
+files, = glob_wildcards("{file}.bedGraph.gz")
+
+rule average:
+    input:  expand("{file}.mC.txt", file=files)
+
+# a general rule using wildcards that does the work
+rule:
+    input:  "{file}.bedGraph.gz"
+    output: "{file}.mC.txt"
+    shell:  """zcat {input} | awk "{{ sum += \$4 }} END {{ if (NR > 0) print sum / NR }}" > {output}"""

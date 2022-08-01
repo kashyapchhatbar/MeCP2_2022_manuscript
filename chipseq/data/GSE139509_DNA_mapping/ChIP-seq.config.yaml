@@ -1,0 +1,51 @@
+BAMPEPeaks: null
+BAMPeaks: --mfold 0 50
+absBestLFC: 1
+bamExt: .filtered.bam
+baseDir: /localdisk/home/kchhatba/mambaforge/envs/snakePipes/lib/python3.10/site-packages/snakePipes
+bigWigType: log2ratio
+bwBinSize: 1000
+clusterConfig: shared/cluster.yaml
+clusterConfigFile: null
+configFile: null
+configMode: manual
+createDAG: false
+cutntag: false
+emailAddress: null
+emailSender: null
+fdr: 0.05
+filterGTF: null
+fragmentLength: 150
+fromBAM: null
+genome: GRCm38_gencode_release19
+getSizeFactorsFrom: genome
+keepTemp: false
+local: true
+maxJobs: 5
+max_thread: 25
+oldConfig: null
+onlySSL: false
+organismsDir: /localdisk/home/kchhatba/snakePipes
+outdir: /datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE139509_DNA_mapping
+pairedEnd: false
+peakCaller: MACS2
+peakCallerOptions: -g mm -m 1 30 -p 0.2 --call-summits --keep-dup all
+pipeline: chip-seq
+plotFormat: png
+predictChIPDict: null
+sampleSheet: null
+samples_config: /datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE139509.ChIP.dict.yaml
+smtpPassword: null
+smtpPort: 0
+smtpServer: null
+smtpUsername: null
+snakemakeOptions: ' --use-conda --conda-prefix /localdisk/home/kchhatba/mambaforge/envs  -p
+  -j 64'
+spikeinExt: _spikein
+spikein_bin_size: 1000
+tempDir: /datastore/homes3/kchhatba/temp
+toolsVersion: true
+useSpikeInForNorm: false
+verbose: false
+windowSize: '1000'
+workingdir: /datastore/homes3/kchhatba/abird/abird/Ibrahim_rebuttal_efforts/source_code/chipseq/data/GSE139509_DNA_mapping

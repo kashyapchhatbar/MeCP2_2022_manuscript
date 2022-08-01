@@ -1,0 +1,13 @@
+sample	condition
+WT_nuclear_RNAseq_rep1	WT
+WT_nuclear_RNAseq_rep2	WT
+WT_nuclear_RNAseq_rep3	WT
+WT_nuclear_RNAseq_rep4	WT
+R106W_nuclear_RNAseq_rep1	R106W
+R106W_nuclear_RNAseq_rep2	R106W
+R106W_nuclear_RNAseq_rep3	R106W
+R106W_nuclear_RNAseq_rep4	R106W
+T158M_nuclear_RNAseq_rep1	T158M
+T158M_nuclear_RNAseq_rep2	T158M
+T158M_nuclear_RNAseq_rep3	T158M
+T158M_nuclear_RNAseq_rep4	T158M

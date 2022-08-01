@@ -1,0 +1,52 @@
+import glob
+
+singleend_gses = ["GSE128178", "GSE67294"]
+pairedend_gses = ["GSE66870"]
+
+singleend_ids = []
+for gse in singleend_gses:
+    singleend_ids += [i.split("data/")[-1].split("_1.fastq.gz")[0] for i in glob.glob(f"data/{gse}/*.gz")]
+
+pairedend_ids = [i.split("data/")[-1].split("_1.fastq.gz")[0] for i in glob.glob(f"data/GSE66870/*_1.fastq.gz")]
+
+rule singleend:
+    input: expand("kallisto/{id}/abundance.tsv", id = singleend_ids + pairedend_ids)
+
+rule pairedend:
+    input: expand("kallisto/{pid}/abundance.h5", pid = pairedend_ids)
+    
+rule kallisto_singleend:
+    input: "data/{id}_1.fastq.gz"
+    output: "kallisto/{id}/abundance.tsv"
+    params: index="annotation/mus_musculus/transcriptome.idx", outdir="kallisto/{id}"
+    shell: "kallisto quant -t 16 --single -i {params.index} -o {params.outdir} -l 200 -s 20 {input}"
+
+rule kallisto_pairedend:
+    input: one="data/{pid}_1.fastq.gz", two="data/{pid}_2.fastq.gz"
+    output: "kallisto/{pid}/abundance.h5"
+    params: index="annotation/mus_musculus/transcriptome.idx", outdir="kallisto/{pid}"
+    shell: "kallisto quant -t 16 -i {params.index} -o {params.outdir} {input.one} {input.two}"
+
+rule counts:
+    input: expand("kallisto/{gse}/counts.tsv", gse=singleend_gses+pairedend_gses)
+
+rule tximport:
+    output: "kallisto/{gse}/counts.tsv"
+    shell: "Rscript scripts/tximport.R {wildcards.gse} data/{wildcards.gse}.sampleSheet.tsv {output}"
+    
+rule intcounts:
+    input: expand("kallisto/{gse}/counts_int.tsv", gse=singleend_gses+pairedend_gses)
+
+rule convertint:
+    output: "kallisto/{gse}/counts_int.tsv"
+    input: "kallisto/{gse}/counts.tsv"
+    shell: "python3 scripts/convert_gse_counts.py {input} {output}"
+
+rule deseq:
+    input: expand("DESeq2/{gse}/ko_vs_wt.tsv", gse=singleend_gses+pairedend_gses)
+
+rule run_deseq2:
+    input: counts="kallisto/{gse}/counts_int.tsv", design="data/{gse}.sampleSheet.tsv"
+    output: "DESeq2/{gse}/ko_vs_wt.tsv"
+    params: threshold=30, outdir="DESeq2/{gse}/"
+    shell: "Rscript scripts/DESeq2.R {input.counts} {input.design} {params.threshold} {params.outdir}"

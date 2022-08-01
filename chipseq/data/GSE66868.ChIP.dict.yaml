@@ -1,0 +1,7 @@
+chip_dict:
+    SRR1914881:
+      control: SRR1914878
+    SRR1914882:
+      control: SRR1914879
+    SRR1914883:
+      control: SRR1914880

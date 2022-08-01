@@ -1,0 +1,55 @@
+rule windows:
+    input: expand("windows/{assembly}.1kb.subtract.CAn.bed", assembly=["mm9"])
+    
+rule repeat_windows:
+    input: expand("windows/{assembly}.{repeat}.1kb.bed", assembly=["mm9", "mm10"], repeat=["CAn", "CANn", "except_CAn"])
+    
+rule makewindows:
+    input: "windows/{assembly}.CAn.1kb.bed"
+    output: "windows/{assembly}.1kb.bed"    
+    shell: "bedtools makewindows -g data/{wildcards.assembly}.chrom.sizes -w 1000 | shuf -n 500000 --random-source=random_source.txt | sort -k1,1 -k2,2n > {output}"
+    
+rule makewindows_exceptCAn:
+    input: "windows/{assembly}.1kb.bed"
+    output: "windows/{assembly}.1kb.subtract.CAn.bed"
+    shell: "bedtools subtract -a {input} -b windows/{wildcards.assembly}.CAn.1kb.bed -A > {output}"
+   
+rule repeat_makewindows:
+    input: lambda wildcards: "data/{}.{}.bed".format(wildcards.assembly, wildcards.repeat.replace("_", "."))
+    output: "windows/{assembly}.{repeat}.1kb.bed"
+    shell: "bedtools slop -b 400 -i {input} -g data/{wildcards.assembly}.chrom.sizes > {output}"
+
+rule mm10_liftover:
+    output: "windows/mm10.1kb.subtract.CAn.bed"
+    params:
+        unsorted_out="windows/mm10.1kb.unsorted.bed",
+        out="windows/mm10.1kb.bed",
+        temp=temp("windows/unmapped")
+    input: "windows/mm9.1kb.bed"
+    run:
+        shell("liftOver {input} windows/mm9ToMm10.over.chain.gz {params.unsorted_out} {params.temp}")
+        shell("sort -k1,1 -k2,2n {params.unsorted_out} > {params.out}")
+        shell("bedtools subtract -a {params.out} -b windows/mm10.CAn.1kb.bed -A > {output}")
+        
+rule jellyfish:
+    input: expand("data/{genome}.3mer.counts", genome=["mm9.chromFa.tar.gz", "mm10.fa.gz", "chm13.draft_v1.1.fasta.gz"])
+
+rule run_jellyfish_mm9:
+    output: "data/mm9.chromFa.tar.gz.3mer.jf"
+    input: "data/mm9.chromFa.tar.gz"
+    shell: "jellyfish count -m 3 -s 1G -t 24 -C -o {output} <(tar xzOf {input})"
+    
+rule run_jellyfish_chm13:
+    output: "data/chm13.draft_v1.1.fasta.gz"
+    input: "data/chm13.draft_v1.1.fasta.gz"
+    shell: "jellyfish count -m 3 -s 1G -t 24 -C -o {output} <(zcat {input})"
+
+rule run_jellyfish_mm10:
+    output: "data/mm10.fa.gz.3mer.jf"
+    input: "data/mm10.fa.gz"
+    shell: "jellyfish count -m 3 -s 1G -t 24 -C -o {output} <(zcat {input})"
+
+rule run_jellyfish_dump:
+    input: "data/{genome}.3mer.jf"
+    output: "data/{genome}.3mer.counts"
+    shell: "jellyfish dump {input} > {output}"    

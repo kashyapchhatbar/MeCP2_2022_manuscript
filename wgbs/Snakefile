@@ -1,0 +1,53 @@
+lister_samples = ["GSE47966_MethylC-Seq_mm_fc_6wk", "GSE47966_MethylC-Seq_mm_fc_male_7wk_neun_neg", "GSE47966_MethylC-Seq_mm_fc_male_7wk_neun_pos"]
+
+rule lister:
+    input: expand("GSE47966/{sample}.{context}.{coverage}.bedGraph.gz", sample=lister_samples, context=["CA", "CAC", "CG"], coverage=[10])
+
+rule run_lister:
+    input: "data/{sample}.txt.gz"
+    output: "GSE47966/{sample}.{context}.{coverage}.bedGraph.gz"
+    params: context="{context}", coverage="{coverage}", sample="{sample}"
+    shell: "python scripts/get_trinucleotide.py --output_prefix GSE47966/{params.sample}.{params.context}.{params.coverage} --context {params.context} --coverage {params.coverage} --genome mm9 {input}"
+
+rule boxer:
+    input: expand("GSE128172/GSE128172_MeCP2_WT_OX_rep123.{context}.{coverage}.bedGraph.gz", context=["CA", "CAC", "CG"], coverage=[10,5])
+
+rule run_extract_boxer:
+    input: "data/GSE128172_MeCP2_WT_OX_rep123.txt.gz"
+    output: temp("temp/GSE128172_MeCP2_WT_OX_rep123.{context}.preprocessed.gz")
+    params: context="{context}"
+    shell: "python scripts/get_trinucleotide_boxer.py --output_prefix temp/GSE128172_MeCP2_WT_OX_rep123.{params.context} --genome mm10 --context {params.context} {input}"
+
+rule run_bedgraph_boxer:
+    input: "temp/GSE128172_MeCP2_WT_OX_rep123.{context}.preprocessed.gz"
+    output: "GSE128172/GSE128172_MeCP2_WT_OX_rep123.{context}.{coverage}.bedGraph.gz"
+    params: context="{context}", coverage="{coverage}"
+    shell: "zcat {input} | sort -S 15% -k1,1 -k2,2n | bedtools merge -d -2 -i stdin -c 4,5 -o sum,sum | python3 scripts/boxer_bedgraph.py --coverage {params.coverage} --output_prefix GSE128172/GSE128172_MeCP2_WT_OX_rep123.{params.context}.{params.coverage} -"
+
+rule lagger:
+    input:
+        expand("GSE84533/GSE84533_hypothalamus_rep123.{context}.{coverage}.bedGraph.gz", context=["CA", "CG", "CAC"], coverage=[10,5])
+    
+rule run_extract_lagger:
+    input:
+        rep1 = "data/GSE84533_GSM2241593_hypothalamus_1.txt.gz",
+        rep2 = "data/GSE84533_GSM2241594_hypothalamus_2.txt.gz",
+        rep3 = "data/GSE84533_GSM2241595_hypothalamus_3.txt.gz"
+    output: temp("temp/GSE84533_hypothalamus_rep123.{context}.preprocessed.gz")
+    params: context="{context}"
+    shell: "python scripts/get_trinucleotide_lagger.py --output_prefix temp/GSE84533_hypothalamus_rep123.{params.context} --context {params.context} --genome mm9 {input.rep1} {input.rep2} {input.rep3}"
+    
+rule run_bedgraph_lagger:
+    input: "temp/GSE84533_hypothalamus_rep123.{context}.preprocessed.gz"
+    output: "GSE84533/GSE84533_hypothalamus_rep123.{context}.{coverage}.bedGraph.gz"
+    params: context="{context}", coverage="{coverage}"
+    shell:  "zcat {input} | sort -S 15% -k1,1 -k2,2n | bedtools merge -d -2 -i stdin -c 4,5 -o sum,sum | python3 scripts/lagger_bedgraph.py --coverage {params.coverage} --output_prefix GSE84533/GSE84533_hypothalamus_rep123.{params.context}.{params.coverage} -"
+
+rule loci:
+    input: expand("loci/{assembly}.{c}.bed", assembly=["mm9", "mm10"], c=["CAn", "CANn", "except_CAn"])
+
+rule copy_repeat_loci:
+    input: lambda wildcards: "../methods/data/{}.{}.bed".format(wildcards.assembly, wildcards.c.replace('_', '.'))
+    output: "loci/{assembly}.{c}.bed"
+    shell: "cp {input} {output}"
+    

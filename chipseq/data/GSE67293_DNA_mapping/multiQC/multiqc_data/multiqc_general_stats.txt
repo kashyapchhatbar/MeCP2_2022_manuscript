@@ -1,0 +1,9 @@
+Sample	Samtools_mqc-generalstats-samtools-flagstat_total	Samtools_mqc-generalstats-samtools-mapped_passed	Bowtie 2 / HiSAT2_mqc-generalstats-bowtie_2_hisat2-overall_alignment_rate
+SRR1930028	22492504	21856427	
+SRR1930028.Bowtie2			97.17
+SRR1930029	15765738	15028978	
+SRR1930029.Bowtie2			95.33
+SRR1930030	54383677	52633993	
+SRR1930030.Bowtie2			96.78
+SRR1930031	13212224	12783470	
+SRR1930031.Bowtie2			96.75

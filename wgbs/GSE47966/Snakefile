@@ -1,0 +1,32 @@
+lister_samples = ["GSE47966_MethylC-Seq_mm_fc_6wk", "GSE47966_MethylC-Seq_mm_fc_male_7wk_neun_neg", "GSE47966_MethylC-Seq_mm_fc_male_7wk_neun_pos"]
+
+rule repeats:
+    input:
+        expand("{sample}.{a}.{b}.{c}.bedGraph.gz", a=["CA", "CG", "CAC"], b=[10], c=["CAn", "CANn", "except_CAn"], sample=lister_samples),
+        expand("{sample}.{a}.{b}.subtract.{c}.bedGraph.gz", a=["CA", "CAC"], b=[10], c=["CAn"], sample=lister_samples),
+    
+
+rule intersect:
+    input:
+        bedgraph="{sample}.{a}.{b}.bedGraph.gz",
+        loci="../loci/mm9.{c}.bed"
+    output: "{sample}.{a}.{b}.{c}.bedGraph.gz"
+    shell: "bedtools intersect -a {input.bedgraph} -b {input.loci} -u | gzip -c > {output}"
+
+rule subtract:
+    input:
+        bedgraph="{sample}.{a}.{b}.bedGraph.gz",
+        loci="../loci/mm9.{c}.bed"
+    output: "{sample}.{a}.{b}.subtract.{c}.bedGraph.gz"
+    shell: "bedtools subtract -a {input.bedgraph} -b {input.loci} -u | gzip -c > {output}"
+    
+files, = glob_wildcards("{file}.bedGraph.gz")
+
+rule average:
+    input:  expand("{file}.mC.txt", file=files)
+
+# a general rule using wildcards that does the work
+rule:
+    input:  "{file}.bedGraph.gz"
+    output: "{file}.mC.txt"
+    shell:  """zcat {input} | awk "{{ sum += \$4 }} END {{ if (NR > 0) print sum / NR }}" > {output}"""

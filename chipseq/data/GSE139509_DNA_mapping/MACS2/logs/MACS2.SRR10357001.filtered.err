@@ -1,0 +1,102 @@
+INFO  @ Wed, 27 Jul 2022 17:39:41: 
+# Command line: callpeak -t filtered_bam/SRR10357001.filtered.bam -c filtered_bam/SRR10357003.filtered.bam -f BAM -g 2652783500 -g mm -m 1 30 -p 0.2 --call-summits --keep-dup all --keep-dup all --outdir MACS2 --name SRR10357001.filtered.BAM --mfold 0 50 --extsize 150
+# ARGUMENTS LIST:
+# name = SRR10357001.filtered.BAM
+# format = BAM
+# ChIP-seq file = ['filtered_bam/SRR10357001.filtered.bam']
+# control file = ['filtered_bam/SRR10357003.filtered.bam']
+# effective genome size = 1.87e+09
+# band width = 300
+# model fold = [0, 50]
+# pvalue cutoff = 2.00e-01
+# qvalue will not be calculated and reported as -1 in the final output.
+# The maximum gap between significant sites is assigned as the read length/tag size.
+# The minimum length of peaks is assigned as the predicted fragment length "d".
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+# Searching for subpeak summits is on
+ 
+INFO  @ Wed, 27 Jul 2022 17:39:41: #1 read tag files... 
+INFO  @ Wed, 27 Jul 2022 17:39:41: #1 read treatment tags... 
+INFO  @ Wed, 27 Jul 2022 17:39:43:  1000000 
+INFO  @ Wed, 27 Jul 2022 17:39:45:  2000000 
+INFO  @ Wed, 27 Jul 2022 17:39:47:  3000000 
+INFO  @ Wed, 27 Jul 2022 17:39:48:  4000000 
+INFO  @ Wed, 27 Jul 2022 17:39:50:  5000000 
+INFO  @ Wed, 27 Jul 2022 17:39:52:  6000000 
+INFO  @ Wed, 27 Jul 2022 17:39:54:  7000000 
+INFO  @ Wed, 27 Jul 2022 17:39:56:  8000000 
+INFO  @ Wed, 27 Jul 2022 17:39:58:  9000000 
+INFO  @ Wed, 27 Jul 2022 17:40:00:  10000000 
+INFO  @ Wed, 27 Jul 2022 17:40:02:  11000000 
+INFO  @ Wed, 27 Jul 2022 17:40:03:  12000000 
+INFO  @ Wed, 27 Jul 2022 17:40:05:  13000000 
+INFO  @ Wed, 27 Jul 2022 17:40:07:  14000000 
+INFO  @ Wed, 27 Jul 2022 17:40:09:  15000000 
+INFO  @ Wed, 27 Jul 2022 17:40:11:  16000000 
+INFO  @ Wed, 27 Jul 2022 17:40:13:  17000000 
+INFO  @ Wed, 27 Jul 2022 17:40:15:  18000000 
+INFO  @ Wed, 27 Jul 2022 17:40:17:  19000000 
+INFO  @ Wed, 27 Jul 2022 17:40:18:  20000000 
+INFO  @ Wed, 27 Jul 2022 17:40:20:  21000000 
+INFO  @ Wed, 27 Jul 2022 17:40:22:  22000000 
+INFO  @ Wed, 27 Jul 2022 17:40:24:  23000000 
+INFO  @ Wed, 27 Jul 2022 17:40:26: 23773454 reads have been read. 
+INFO  @ Wed, 27 Jul 2022 17:40:27: #1.2 read input tags... 
+INFO  @ Wed, 27 Jul 2022 17:40:29:  1000000 
+INFO  @ Wed, 27 Jul 2022 17:40:30:  2000000 
+INFO  @ Wed, 27 Jul 2022 17:40:32:  3000000 
+INFO  @ Wed, 27 Jul 2022 17:40:34:  4000000 
+INFO  @ Wed, 27 Jul 2022 17:40:36:  5000000 
+INFO  @ Wed, 27 Jul 2022 17:40:38:  6000000 
+INFO  @ Wed, 27 Jul 2022 17:40:40:  7000000 
+INFO  @ Wed, 27 Jul 2022 17:40:41:  8000000 
+INFO  @ Wed, 27 Jul 2022 17:40:43:  9000000 
+INFO  @ Wed, 27 Jul 2022 17:40:45:  10000000 
+INFO  @ Wed, 27 Jul 2022 17:40:47:  11000000 
+INFO  @ Wed, 27 Jul 2022 17:40:49:  12000000 
+INFO  @ Wed, 27 Jul 2022 17:40:51:  13000000 
+INFO  @ Wed, 27 Jul 2022 17:40:53:  14000000 
+INFO  @ Wed, 27 Jul 2022 17:40:55:  15000000 
+INFO  @ Wed, 27 Jul 2022 17:40:56:  16000000 
+INFO  @ Wed, 27 Jul 2022 17:40:58:  17000000 
+INFO  @ Wed, 27 Jul 2022 17:41:00:  18000000 
+INFO  @ Wed, 27 Jul 2022 17:41:02:  19000000 
+INFO  @ Wed, 27 Jul 2022 17:41:04:  20000000 
+INFO  @ Wed, 27 Jul 2022 17:41:06:  21000000 
+INFO  @ Wed, 27 Jul 2022 17:41:08:  22000000 
+INFO  @ Wed, 27 Jul 2022 17:41:09:  23000000 
+INFO  @ Wed, 27 Jul 2022 17:41:11:  24000000 
+INFO  @ Wed, 27 Jul 2022 17:41:13:  25000000 
+INFO  @ Wed, 27 Jul 2022 17:41:15:  26000000 
+INFO  @ Wed, 27 Jul 2022 17:41:17:  27000000 
+INFO  @ Wed, 27 Jul 2022 17:41:19:  28000000 
+INFO  @ Wed, 27 Jul 2022 17:41:21:  29000000 
+INFO  @ Wed, 27 Jul 2022 17:41:22:  30000000 
+INFO  @ Wed, 27 Jul 2022 17:41:24: 30380880 reads have been read. 
+INFO  @ Wed, 27 Jul 2022 17:41:25: #1 tag size is determined as 75 bps 
+INFO  @ Wed, 27 Jul 2022 17:41:25: #1 tag size = 75.0 
+INFO  @ Wed, 27 Jul 2022 17:41:25: #1  total tags in treatment: 23773454 
+INFO  @ Wed, 27 Jul 2022 17:41:25: #1  total tags in control: 30380880 
+INFO  @ Wed, 27 Jul 2022 17:41:25: #1 finished! 
+INFO  @ Wed, 27 Jul 2022 17:41:25: #2 Build Peak Model... 
+INFO  @ Wed, 27 Jul 2022 17:41:25: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Wed, 27 Jul 2022 17:41:48: #2 number of paired peaks: 1117036 
+INFO  @ Wed, 27 Jul 2022 17:41:48: start model_add_line... 
+INFO  @ Wed, 27 Jul 2022 17:41:49: start X-correlation... 
+INFO  @ Wed, 27 Jul 2022 17:41:49: end of X-cor 
+INFO  @ Wed, 27 Jul 2022 17:41:49: #2 finished! 
+INFO  @ Wed, 27 Jul 2022 17:41:49: #2 predicted fragment length is 298 bps 
+INFO  @ Wed, 27 Jul 2022 17:41:49: #2 alternative fragment length(s) may be 298 bps 
+INFO  @ Wed, 27 Jul 2022 17:41:49: #2.2 Generate R script for model : MACS2/SRR10357001.filtered.BAM_model.r 
+INFO  @ Wed, 27 Jul 2022 17:41:49: #3 Call peaks... 
+INFO  @ Wed, 27 Jul 2022 17:41:49: #3 Going to call summits inside each peak ... 
+INFO  @ Wed, 27 Jul 2022 17:41:49: #3 Call peaks with given -log10pvalue cutoff: 0.69897 ... 
+INFO  @ Wed, 27 Jul 2022 17:41:49: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Wed, 27 Jul 2022 17:44:39: #3 Call peaks for each chromosome... 
+INFO  @ Wed, 27 Jul 2022 17:46:55: #4 Write output xls file... MACS2/SRR10357001.filtered.BAM_peaks.xls 
+INFO  @ Wed, 27 Jul 2022 17:46:56: #4 Write peak in narrowPeak format file... MACS2/SRR10357001.filtered.BAM_peaks.narrowPeak 
+INFO  @ Wed, 27 Jul 2022 17:46:57: #4 Write summits bed file... MACS2/SRR10357001.filtered.BAM_summits.bed 
+INFO  @ Wed, 27 Jul 2022 17:46:57: Done! 

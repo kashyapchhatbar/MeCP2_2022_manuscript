@@ -1,0 +1,208 @@
+
+
+BAM file : filtered_bam/SRR10356997.filtered.bam
+No pairs were found. Is the data from a paired-end sequencing experiment?
+
+Read lengths:
+Sample size: 13897105
+
+Min.: 59.0
+1st Qu.: 74.0
+Mean: 74.58180880118557
+Median: 75.0
+3rd Qu.: 75.0
+Max.: 75.0
+Std: 0.7778915971381436
+MAD: 0.0
+Len. 10%: 74.0
+Len. 20%: 74.0
+Len. 30%: 75.0
+Len. 40%: 75.0
+Len. 60%: 75.0
+Len. 70%: 75.0
+Len. 80%: 75.0
+Len. 90%: 75.0
+Len. 99%: 75.0
+
+
+
+BAM file : filtered_bam/SRR10356998.filtered.bam
+No pairs were found. Is the data from a paired-end sequencing experiment?
+
+Read lengths:
+Sample size: 14867751
+
+Min.: 61.0
+1st Qu.: 74.0
+Mean: 74.59412536569923
+Median: 75.0
+3rd Qu.: 75.0
+Max.: 75.0
+Std: 0.7642354987199116
+MAD: 0.0
+Len. 10%: 74.0
+Len. 20%: 74.0
+Len. 30%: 75.0
+Len. 40%: 75.0
+Len. 60%: 75.0
+Len. 70%: 75.0
+Len. 80%: 75.0
+Len. 90%: 75.0
+Len. 99%: 75.0
+
+
+
+BAM file : filtered_bam/SRR10356999.filtered.bam
+No pairs were found. Is the data from a paired-end sequencing experiment?
+
+Read lengths:
+Sample size: 14386054
+
+Min.: 39.0
+1st Qu.: 74.0
+Mean: 74.56830789040552
+Median: 75.0
+3rd Qu.: 75.0
+Max.: 75.0
+Std: 0.7927919178566609
+MAD: 0.0
+Len. 10%: 74.0
+Len. 20%: 74.0
+Len. 30%: 75.0
+Len. 40%: 75.0
+Len. 60%: 75.0
+Len. 70%: 75.0
+Len. 80%: 75.0
+Len. 90%: 75.0
+Len. 99%: 75.0
+
+
+
+BAM file : filtered_bam/SRR10357000.filtered.bam
+No pairs were found. Is the data from a paired-end sequencing experiment?
+
+Read lengths:
+Sample size: 14698878
+
+Min.: 51.0
+1st Qu.: 74.0
+Mean: 74.5686439468373
+Median: 75.0
+3rd Qu.: 75.0
+Max.: 75.0
+Std: 0.7922146982990889
+MAD: 0.0
+Len. 10%: 74.0
+Len. 20%: 74.0
+Len. 30%: 75.0
+Len. 40%: 75.0
+Len. 60%: 75.0
+Len. 70%: 75.0
+Len. 80%: 75.0
+Len. 90%: 75.0
+Len. 99%: 75.0
+
+
+
+BAM file : filtered_bam/SRR10357001.filtered.bam
+No pairs were found. Is the data from a paired-end sequencing experiment?
+
+Read lengths:
+Sample size: 11743302
+
+Min.: 59.0
+1st Qu.: 74.0
+Mean: 74.58514027826246
+Median: 75.0
+3rd Qu.: 75.0
+Max.: 75.0
+Std: 0.7734927261188596
+MAD: 0.0
+Len. 10%: 74.0
+Len. 20%: 74.0
+Len. 30%: 75.0
+Len. 40%: 75.0
+Len. 60%: 75.0
+Len. 70%: 75.0
+Len. 80%: 75.0
+Len. 90%: 75.0
+Len. 99%: 75.0
+
+
+
+BAM file : filtered_bam/SRR10357002.filtered.bam
+No pairs were found. Is the data from a paired-end sequencing experiment?
+
+Read lengths:
+Sample size: 14511031
+
+Min.: 60.0
+1st Qu.: 74.0
+Mean: 74.5915665813132
+Median: 75.0
+3rd Qu.: 75.0
+Max.: 75.0
+Std: 0.765896461115389
+MAD: 0.0
+Len. 10%: 74.0
+Len. 20%: 74.0
+Len. 30%: 75.0
+Len. 40%: 75.0
+Len. 60%: 75.0
+Len. 70%: 75.0
+Len. 80%: 75.0
+Len. 90%: 75.0
+Len. 99%: 75.0
+
+
+
+BAM file : filtered_bam/SRR10357003.filtered.bam
+No pairs were found. Is the data from a paired-end sequencing experiment?
+
+Read lengths:
+Sample size: 14997775
+
+Min.: 60.0
+1st Qu.: 74.0
+Mean: 74.56824969037073
+Median: 75.0
+3rd Qu.: 75.0
+Max.: 75.0
+Std: 0.7931387221731583
+MAD: 0.0
+Len. 10%: 74.0
+Len. 20%: 74.0
+Len. 30%: 75.0
+Len. 40%: 75.0
+Len. 60%: 75.0
+Len. 70%: 75.0
+Len. 80%: 75.0
+Len. 90%: 75.0
+Len. 99%: 75.0
+
+
+
+BAM file : filtered_bam/SRR10357004.filtered.bam
+No pairs were found. Is the data from a paired-end sequencing experiment?
+
+Read lengths:
+Sample size: 14845072
+
+Min.: 59.0
+1st Qu.: 74.0
+Mean: 74.56976813585007
+Median: 75.0
+3rd Qu.: 75.0
+Max.: 75.0
+Std: 0.7910211512060286
+MAD: 0.0
+Len. 10%: 74.0
+Len. 20%: 74.0
+Len. 30%: 75.0
+Len. 40%: 75.0
+Len. 60%: 75.0
+Len. 70%: 75.0
+Len. 80%: 75.0
+Len. 90%: 75.0
+Len. 99%: 75.0
+

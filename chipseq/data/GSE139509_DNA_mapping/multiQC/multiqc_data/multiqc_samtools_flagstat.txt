@@ -1,0 +1,9 @@
+Sample	total_passed	total_failed	secondary_passed	secondary_failed	supplementary_passed	supplementary_failed	duplicates_passed	duplicates_failed	mapped_passed	mapped_failed	mapped_passed_pct	mapped_failed_pct	paired in sequencing_passed	paired in sequencing_failed	read1_passed	read1_failed	read2_passed	read2_failed	properly paired_passed	properly paired_failed	properly paired_passed_pct	properly paired_failed_pct	with itself and mate mapped_passed	with itself and mate mapped_failed	singletons_passed	singletons_failed	singletons_passed_pct	singletons_failed_pct	with mate mapped to a different chr_passed	with mate mapped to a different chr_failed	with mate mapped to a different chr (mapQ >= 5)_passed	with mate mapped to a different chr (mapQ >= 5)_failed	flagstat_total
+SRR10356997	28839666	0	0	0	0	0	4906232	0	28143609	0	97.59	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	28839666
+SRR10356998	30929676	0	0	0	0	0	7729064	0	30160923	0	97.51	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	30929676
+SRR10356999	29765678	0	0	0	0	0	3466678	0	29137407	0	97.89	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	29765678
+SRR10357000	30604045	0	0	0	0	0	5769876	0	29828515	0	97.47	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	30604045
+SRR10357001	24436337	0	0	0	0	0	4781797	0	23773454	0	97.29	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	24436337
+SRR10357002	30266132	0	0	0	0	0	7485012	0	29434152	0	97.25	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	30266132
+SRR10357003	31097356	0	0	0	0	0	5572365	0	30380880	0	97.7	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	31097356
+SRR10357004	30868793	0	0	0	0	0	9427532	0	30101184	0	97.51	nan	0	0	0	0	0	0	0	0	nan	nan	0	0	0	0	nan	nan	0	0	0	0	30868793
