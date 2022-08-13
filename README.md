@@ -35,3 +35,5 @@ The repository is divided into multiple directories which contain jupyter notebo
 6. Comparative analysis of DNA methylation and transcriptional regulation in the absence of MeCP2
     1. [Differential gene expression vs DNA methylation of gene bodies in mammalian brain](rnaseq/02_analysis.ipynb)
 
+
+The notebooks to generate all the figures can be found in this [directory](figures).
