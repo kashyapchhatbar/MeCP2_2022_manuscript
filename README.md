@@ -10,6 +10,8 @@ Contrary to the claims of a recent publication,
 
 which proposes that arrays of tandemly repeated CA containing either methylated or hydroxymethylated cytosine are the primary targets for MeCP2 binding and function. We investigated these predictions using a range of published data sets and found **no support for the hypothesis that CA repeats are key mediators of MeCP2 function**.
 
+Before starting the analysis, fulfill the [installation requirements](prerequisities.md). They should install the required software necessary for reproducing the analysis.
+
 The repository is divided into multiple directories which contain jupyter notebooks to facilitate reproducible analysis. The execution order of the notebooks is as follows
 
 1. CA repeats in the genome
