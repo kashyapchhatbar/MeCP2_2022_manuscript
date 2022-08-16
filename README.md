@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6997675.svg)](https://doi.org/10.5281/zenodo.6997675)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6997675.svg)](https://doi.org/10.5281/zenodo.6997675)  [![DOI](https://img.shields.io/badge/bioR%CF%87iv%20DOI-10.1101%2F2022.04.26.489598%20-BC2635)](https://doi.org/10.1101/2022.04.26.489598)
 
 # A critique of the hypothesis that CA repeats are primary targets of neuronal MeCP2 
 
