@@ -1,8 +1,8 @@
-# Evaluation of CA repeat arrays as targets for MeCP2 function in the brain 
+# A critique of the hypothesis that CA repeats are primary targets of neuronal MeCP2 
 
 This repository contains source code and files required to replicate the findings from our manuscript.
 
-> [Chhatbar, Kashyap, John Connelly, Shaun Webb, Skirmantas Kriaucionis, and Adrian Bird. "Evaluation of CA repeat arrays as targets for MeCP2 function in the brain." bioRxiv (2022).](https://www.biorxiv.org/content/10.1101/2022.04.26.489598v1)
+> [Chhatbar, Kashyap, John Connelly, Shaun Webb, Skirmantas Kriaucionis, and Adrian Bird. "A critique of the hypothesis that CA repeats are primary targets of neuronal MeCP2." bioRxiv (2022).](https://doi.org/10.1101/2022.04.26.489598)
 
 Contrary to the claims of a recent publication,
 
@@ -12,7 +12,7 @@ which proposes that arrays of tandemly repeated CA containing either methylated 
 
 Before starting the analysis, fulfill the [installation requirements](prerequisities.md). They should install the required software necessary for reproducing the analysis.
 
-The repository is divided into multiple directories which contain jupyter notebooks to facilitate reproducible analysis. The execution order of the notebooks is as follows
+The repository is divided into multiple directories containing step-by-step information formatted as jupyter notebooks. The execution order of the notebooks is as follows:
 
 1. CA repeats in the genome
     1. [Extract CA repeat loci in mammalian genomes](methods/01_CA_repeat_loci.ipynb)    
