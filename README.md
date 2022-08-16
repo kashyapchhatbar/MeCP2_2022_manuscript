@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6997675.svg)](https://doi.org/10.5281/zenodo.6997675)
+
 # A critique of the hypothesis that CA repeats are primary targets of neuronal MeCP2 
 
 This repository contains source code and files required to replicate the findings from our manuscript.
